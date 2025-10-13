@@ -7,7 +7,6 @@
 </template>
 
 <script setup>
-// Tidak perlu import apapun di sini
 </script>
 
 <style>
