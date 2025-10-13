@@ -3,13 +3,11 @@
     'fixed top-0 left-0 w-full z-50 transition-all duration-300 flex justify-between items-center px-6 py-4 shadow-md',
     isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md text-cyan-500' : 'bg-transparent text-white'
   ]">
-    <!-- Logo -->
     <router-link to="/career" class="text-2xl font-bold hover:text-cyan-400 transition-colors">
       <img :src="iconImg" alt="" width="90px">
     </router-link>
 
 
-    <!-- Tombol Burger (mobile) -->
     <button @click="toggleMenu" class="md:hidden focus:outline-none">
       <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
         stroke="currentColor" stroke-width="2">
@@ -21,7 +19,6 @@
       </svg>
     </button>
 
-    <!-- Menu Utama (desktop) -->
     <ul class="hidden md:flex space-x-6">
       <li><a href="/career" class="border border-transparent text-current p-2 rounded-3xl transition-all duration-300 
          hover:text-white hover:bg-cyan-400 hover:border-cyan-400 hover:scale-105">Home</a></li>
@@ -33,7 +30,7 @@
          hover:text-white hover:bg-cyan-400 hover:border-cyan-400 hover:scale-105">Contact</a></li>
     </ul>
 
-    <!-- Menu Mobile -->
+
     <transition name="fade">
       <ul v-if="isOpen"
         class="absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-md flex flex-col items-center space-y-4 py-4 md:hidden z-20">

@@ -4,11 +4,9 @@
     :style="{ backgroundImage: `url(${bgImage})` }"
   >
 
-    <!-- Konten -->
     <div
       class="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl bg-white/70 backdrop-blur-md border border-white/30 rounded-3xl shadow-2xl p-8 md:p-12"
     >
-      <!-- Kiri: teks -->
       <div class="flex-1 text-center md:text-left space-y-6 text-[#0D1B2A]">
         <h1 class="text-4xl text-zinc-500 md:text-5xl font-extrabold leading-tight">
           Temukan <span class="text-[#00B8D9]">Jalur Karier Impianmu</span>
@@ -25,7 +23,6 @@
         </a>
       </div>
 
-      <!-- Kanan: gambar -->
       <div class="flex-1 flex justify-center mt-10 md:mt-0">
         <img
           :src="illustImage"

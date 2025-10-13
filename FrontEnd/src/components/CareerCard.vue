@@ -12,7 +12,6 @@
       :key="index"
       class="max-w-6xl mx-auto mb-20 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-10 flex flex-col md:flex-row items-center md:items-start gap-10"
     >
-      <!-- Ilustrasi -->
       <div class="flex-shrink-0">
         <img
           :src="category.animation"
@@ -21,7 +20,6 @@
         />
       </div>
 
-      <!-- Konten -->
       <div class="text-left flex-1">
         <h3 class="text-3xl font-semibold text-[#00B8D9] mb-4">
           {{ category.name }}
