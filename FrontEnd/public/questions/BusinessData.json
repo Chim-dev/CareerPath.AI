@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "question": "Anda tertarik menganalisis data untuk menemukan pola dan wawasan penting bagi bisnis?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 2,
+    "question": "Anda suka membuat keputusan berdasarkan angka, grafik, dan hasil analisis statistik?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 3,
+    "question": "Anda tertarik memahami strategi pemasaran digital seperti SEO, iklan online, dan media sosial?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 4,
+    "question": "Anda suka merencanakan arah bisnis, mengatur strategi pertumbuhan, dan mengelola tim?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 5,
+    "question": "Anda tertarik memahami laporan keuangan, investasi, dan analisis risiko finansial?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 6,
+    "question": "Anda suka memvisualisasikan data menggunakan tools seperti Excel, Tableau, atau Power BI?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 7,
+    "question": "Anda merasa bersemangat untuk membangun bisnis atau startup sendiri dari awal?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 8,
+    "question": "Anda tertarik mempelajari perilaku konsumen untuk meningkatkan penjualan atau kepuasan pelanggan?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 9,
+    "question": "Anda suka menggabungkan logika bisnis dengan analisis data untuk menyelesaikan masalah nyata?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 10,
+    "question": "Anda ingin berkarier di bidang seperti Business Analyst, Data Scientist, atau Product Manager?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  }
+]

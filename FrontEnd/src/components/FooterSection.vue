@@ -27,7 +27,6 @@
           <h3 class="font-semibold text-gray-800 mb-3">Support</h3>
           <ul class="space-y-2 text-sm">
             <li><a href="#" class="hover:text-[#00B8D9] transition">FAQs</a></li>
-            <li><a href="#" class="hover:text-[#00B8D9] transition">Contact Us</a></li>
           </ul>
         </div>
   
@@ -35,7 +34,6 @@
           <h3 class="font-semibold text-gray-800 mb-3">Legal</h3>
           <ul class="space-y-2 text-sm">
             <li><a href="#" class="hover:text-[#00B8D9] transition">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-[#00B8D9] transition">Terms of Use</a></li>
           </ul>
         </div>
       </div>

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "question": "Anda menikmati membuat karya visual atau desain?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 2,
+    "question": "Anda memiliki perhatian besar terhadap detail estetika?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 3,
+    "question": "Anda sering memiliki ide kreatif dalam memecahkan masalah?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 4,
+    "question": "Anda lebih menyukai pekerjaan visual daripada teknis?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 5,
+    "question": "Anda sering mengamati warna, bentuk, dan gaya di sekitar Anda?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 6,
+    "question": "Anda tertarik pada dunia desain grafis atau ilustrasi digital?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 7,
+    "question": "Anda lebih senang mengekspresikan diri melalui karya seni?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 8,
+    "question": "Anda menikmati proyek yang membutuhkan imajinasi tinggi?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 9,
+    "question": "Anda suka membuat sesuatu terlihat menarik dan harmonis?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 10,
+    "question": "Anda ingin berkarier di bidang desain atau industri kreatif?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  }
+]

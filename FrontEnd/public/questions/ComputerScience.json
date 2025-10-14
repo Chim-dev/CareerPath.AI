@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "question": "Anda tertarik membuat tampilan situs web yang interaktif dan menarik (UI/UX)?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 2,
+    "question": "Anda lebih suka mengatur logika dan struktur data di balik aplikasi (backend logic)?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 3,
+    "question": "Anda suka membuat game dan ingin mempelajari mesin game seperti Unity atau Unreal Engine?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 4,
+    "question": "Anda tertarik membuat aplikasi yang dapat berjalan di ponsel (Android/iOS)?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 5,
+    "question": "Anda suka bekerja dengan data besar, statistik, dan membuat prediksi menggunakan algoritma (machine learning)?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 6,
+    "question": "Anda menikmati mengoptimalkan performa sistem agar lebih efisien dan cepat (backend optimization)?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 7,
+    "question": "Anda merasa puas melihat hasil visual langsung dari kode yang Anda tulis (misalnya tampilan website atau game)?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 8,
+    "question": "Anda ingin mengembangkan kecerdasan buatan yang dapat mengenali suara, gambar, atau teks?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 9,
+    "question": "Anda tertarik mempelajari keamanan siber (cybersecurity) untuk melindungi sistem dan data?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 10,
+    "question": "Anda ingin bekerja di proyek kolaboratif besar menggunakan framework atau teknologi modern seperti React, Django, atau TensorFlow?",
+    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  }
+]
