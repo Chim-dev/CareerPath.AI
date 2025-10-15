@@ -1,6 +1,6 @@
 <template>
   <nav :class="[
-    'fixed top-0 left-0 w-full z-50 transition-all duration-300 flex justify-between items-center px-6 py-4 shadow-md',
+    'fixed top-0 left-0 w-full z-50 transition-all duration-300 flex justify-between items-center px-6 py-8 md:px-4 md:py-2 shadow-md',
     isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md text-cyan-500' : 'bg-transparent text-white'
   ]">
     <router-link to="/career" class="text-2xl font-bold hover:text-cyan-400 transition-colors">
@@ -34,10 +34,10 @@
     <transition name="fade">
       <ul v-if="isOpen"
         class="absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-md flex flex-col items-center space-y-4 py-4 md:hidden z-20">
-        <li><a @click="closeMenu" href="#career" class="hover:underline text-cyan-600">Home</a></li>
-        <li><a @click="closeMenu" href="#about" class="hover:underline text-cyan-600">About</a></li>
-        <li><a @click="closeMenu" href="#career" class="hover:underline text-cyan-600">Career Path</a></li>
-        <li><a @click="closeMenu" href="#contact" class="hover:underline text-cyan-600">Contact</a></li>
+        <li><a @click="closeMenu" href="/career" class="hover:underline text-cyan-600">Home</a></li>
+        <li><a @click="closeMenu" href="/about" class="hover:underline text-cyan-600">About</a></li>
+        <li><a @click="closeMenu" href="/career/#career" class="hover:underline text-cyan-600">Career Path</a></li>
+        <li><a @click="closeMenu" href="/contact" class="hover:underline text-cyan-600">Contact</a></li>
       </ul>
     </transition>
   </nav>
