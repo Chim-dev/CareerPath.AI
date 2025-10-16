@@ -1,6 +1,6 @@
 <template>
   <nav :class="[
-    'fixed top-0 left-0 w-full z-50 transition-all duration-300 flex justify-between items-center px-6 py-8 md:px-4 md:py-2 shadow-md',
+    'fixed top-0 left-0 w-full z-50 transition-all duration-300 flex justify-between items-center px-2 py-2 md:px-6 md:py-2 shadow-md',
     isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md text-cyan-500' : 'bg-transparent text-white'
   ]">
     <router-link to="/career" class="text-2xl font-bold hover:text-cyan-400 transition-colors">

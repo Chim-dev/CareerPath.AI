@@ -3,6 +3,7 @@
     <NavBar />
     <HeaderSection />
     <GallerySection />
+    <HowItWorks />
     <CareerCard />
     <FooterSection />
   </div>
@@ -14,4 +15,5 @@ import CareerCard from '../components/CareerCard.vue'
 import HeaderSection from '../components/HeaderSection.vue'
 import GallerySection from '../components/GallerySection.vue';
 import FooterSection from '../components/FooterSection.vue';
+import HowItWorks from '../components/HowItWorks.vue';
 </script>

@@ -37,7 +37,7 @@
                 </button>
 
                 <button
-                    class="w-full bg-[#f7f7f7] text-[#00B8D9] py-3 rounded-lg mt-4 hover:bg-[#00B8D9] hover:text-white border border-[#00B8D9] transition-all duration-300 font-medium"
+                    class="w-full bg-[#f7f7f7] text-[#00B8D9] py-3 rounded-lg mt-4 hover:bg-red-500 hover:text-white hover:border-red-500 border border-[#00B8D9] transition-all duration-300 font-medium"
                     @click="goBack">
                     Kembali
                 </button>
