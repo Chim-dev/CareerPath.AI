@@ -2,7 +2,7 @@
     <section class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-8 p-6 md:p-10
-               bg-cyan-100/70 backdrop-blur-sm 
+               bg-cyan-50/40 backdrop-blur-sm 
                rounded-tr-lg rounded-bl-lg rounded-tl-[80px] rounded-br-[80px]">
                 <div class="w-full md:w-1/2 flex justify-center">
                     <img :src="missionImage" alt="Our Mission" class="w-72 md:w-96 object-contain rounded-md" />

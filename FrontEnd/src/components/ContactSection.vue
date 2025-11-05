@@ -1,13 +1,41 @@
 <template>
   <section
-    class="min-h-screen bg-cover flex items-center justify-center bg-gradient-to-br from-cyan-50 to-white py-20"
-    :style="{ backgroundImage: `url(${contactBg})` }"
+    class="relative min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50 flex items-center justify-center py-20 overflow-hidden"
   >
-    <div
-      class="w-full max-w-2xl bg-white rounded-2xl shadow-lg p-8 md:p-10 border border-cyan-100"
-    >
-      <h2 class="text-3xl font-bold text-cyan-400 mb-2 text-center">Get in Touch</h2>
-      <p class="text-gray-500 text-center mb-8">
+    <!-- Fixed Bright Cyan Background Circles -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+      <!-- Large gradient circle top-left (BLUR) -->
+      <div class="absolute -top-48 -left-48 w-[600px] h-[600px] bg-gradient-to-br from-cyan-300 to-blue-400 rounded-full opacity-40 blur-3xl"></div>
+      
+      <!-- Extra large circle top-right (NO BLUR) -->
+      <div class="absolute -top-32 -right-40 w-[500px] h-[500px] bg-cyan-400 rounded-full opacity-25"></div>
+      
+      <!-- Medium circle middle-left (BLUR) -->
+      <div class="absolute top-1/4 -left-32 w-96 h-96 bg-gradient-to-tr from-teal-300 to-cyan-300 rounded-full opacity-45 blur-2xl"></div>
+      
+      <!-- Large vibrant circle center-right (NO BLUR) -->
+      <div class="absolute top-1/3 right-10 w-[450px] h-[450px] bg-gradient-to-bl from-pink-300 to-purple-300 rounded-full opacity-20"></div>
+      
+      <!-- Extra large gradient circle bottom-right (BLUR) -->
+      <div class="absolute -bottom-56 -right-56 w-[700px] h-[700px] bg-gradient-to-tl from-cyan-300 via-blue-300 to-purple-300 rounded-full opacity-35 blur-3xl"></div>
+      
+      <!-- Medium circle bottom-left (NO BLUR) -->
+      <div class="absolute bottom-20 left-1/4 w-80 h-80 bg-teal-300 rounded-full opacity-30"></div>
+      
+      <!-- Small accent circle (BLUR) -->
+      <div class="absolute top-2/3 left-1/2 w-64 h-64 bg-gradient-to-r from-cyan-200 to-blue-300 rounded-full opacity-40 blur-xl"></div>
+      
+      <!-- Medium solid circle center (NO BLUR) -->
+      <div class="absolute top-1/2 left-1/3 w-72 h-72 bg-cyan-300 rounded-full opacity-20"></div>
+    </div>
+
+    <!-- Glassmorphism Overlay -->
+    <div class="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)] pointer-events-none z-0"></div>
+
+    <!-- Contact Form Content -->
+    <div class="relative z-10 w-full max-w-2xl bg-white/70 backdrop-blur-md rounded-3xl shadow-xl p-8 md:p-10 border-2 border-cyan-200/60 mx-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2 text-center">Get in Touch</h2>
+      <p class="text-gray-600 text-center mb-8">
         Got a question, feedback, or collaboration idea? Drop me a message below 👇
       </p>
 
@@ -19,7 +47,7 @@
             type="text"
             required
             placeholder="Enter your name"
-            class="w-full px-4 py-3 bg-gray-50 text-gray-800 placeholder-gray-400 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            class="w-full px-4 py-3 bg-white/60 backdrop-blur-sm text-gray-800 placeholder-gray-400 border border-cyan-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition"
           />
         </div>
 
@@ -30,7 +58,7 @@
             type="email"
             required
             placeholder="Enter your email"
-            class="w-full px-4 py-3 bg-gray-50 text-gray-800 placeholder-gray-400 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            class="w-full px-4 py-3 bg-white/60 backdrop-blur-sm text-gray-800 placeholder-gray-400 border border-cyan-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition"
           />
         </div>
 
@@ -41,34 +69,32 @@
             rows="5"
             required
             placeholder="Type your message here..."
-            class="w-full px-4 py-3 bg-gray-50 text-gray-800 placeholder-gray-400 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            class="w-full px-4 py-3 bg-white/60 backdrop-blur-sm text-gray-800 placeholder-gray-400 border border-cyan-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition resize-none"
           ></textarea>
         </div>
 
         <button
           type="submit"
           :disabled="loading"
-          class="w-full bg-cyan-400 text-white py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-400 shadow-lg transition disabled:opacity-70"
+          class="w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white py-3 rounded-xl font-semibold hover:from-cyan-500 hover:to-blue-600 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
         >
           {{ loading ? "Sending..." : "Send Message" }}
         </button>
       </form>
 
-      <p v-if="successMessage" class="text-green-600 mt-4 text-center">
+      <p v-if="successMessage" class="text-green-600 mt-4 text-center font-medium">
         {{ successMessage }}
       </p>
-      <p v-if="errorMessage" class="text-red-600 mt-4 text-center">
+      <p v-if="errorMessage" class="text-red-600 mt-4 text-center font-medium">
         {{ errorMessage }}
       </p>
     </div>
   </section>
 </template>
 
-
 <script setup>
 import { ref } from "vue"
 import emailjs from "emailjs-com"
-import contactBg from '../assets/bg-asset-2.jpg'
 
 // form data
 const form = ref({

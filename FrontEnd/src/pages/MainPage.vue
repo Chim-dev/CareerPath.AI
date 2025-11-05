@@ -1,8 +1,12 @@
 <template>
-  <div>
+  <div class="app-container">
+    <!-- 🔵 Background bola-bola -->
+    <div class="bubble-background"></div>
+
+    <!-- 📦 Isi Halaman -->
     <NavBar />
     <HeaderSection />
-    <GallerySection />
+    <ExplorePath />
     <HowItWorks />
     <CareerCard />
     <FooterSection />
@@ -13,7 +17,7 @@
 import NavBar from '../components/NavBar.vue'
 import CareerCard from '../components/CareerCard.vue'
 import HeaderSection from '../components/HeaderSection.vue'
-import GallerySection from '../components/GallerySection.vue';
-import FooterSection from '../components/FooterSection.vue';
-import HowItWorks from '../components/HowItWorks.vue';
+import FooterSection from '../components/FooterSection.vue'
+import HowItWorks from '../components/HowItWorks.vue'
+import ExplorePath from '../components/ExplorePath.vue'
 </script>
