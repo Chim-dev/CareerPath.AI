@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gradient-to-b from-cyan-50 to-white py-12 px-6 md:px-12 shadow-sm">
+  <section class="bg-linear-to-b from-cyan-50 to-white py-12 px-6 md:px-12 shadow-sm">
     <div class="max-w-[1500px] mx-auto bg-gray-100/50 rounded-3xl px-8 md:px-10 py-15">
       <div class="text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-cyan-500 mb-10">

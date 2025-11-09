@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
+    "axios": "^1.13.2",
     "emailjs-com": "^3.2.0",
     "lottie-web": "^5.13.0",
     "lucide-vue-next": "^0.552.0",

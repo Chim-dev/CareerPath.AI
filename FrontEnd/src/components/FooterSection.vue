@@ -29,13 +29,7 @@
             <li><a href="/faqs" class="hover:text-[#00B8D9] transition">FAQs</a></li>
           </ul>
         </div>
-  
-        <div>
-          <h3 class="font-semibold text-gray-800 mb-3">Legal</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="#" class="hover:text-[#00B8D9] transition">Privacy Policy</a></li>
-          </ul>
-        </div>
+
       </div>
 
       <!-- Garis Pemisah -->
