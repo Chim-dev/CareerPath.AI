@@ -5,7 +5,7 @@ from typing import List
 import os
 import re
 from dotenv import load_dotenv
-from openai import OpenAI
+import google.generativeai as genai
 
 # ============ LOAD ENV ============
 load_dotenv()
@@ -32,29 +32,25 @@ class AnalysisResult(BaseModel):
     career_recommendations: List[str]
     confidence_score: float
 
-# ============ HELPER FUNCTION ============
+# ============ HELPER ============
 def extract_careers_from_text(text: str) -> List[str]:
-    """Ambil daftar nama karier dari teks hasil AI"""
     pattern = r'\d+[\.)]\s*([A-Z][A-Za-z\s/&-]+)'
     matches = re.findall(pattern, text)
     return [m.strip() for m in matches][:5] if matches else ["(AI tidak mendeteksi karier)"]
 
-# ============ KONFIGURASI CLIENT OPENAI (HUGGINGFACE ROUTER) ============
-HF_TOKEN = os.getenv("HF_TOKEN")
-if not HF_TOKEN:
-    raise RuntimeError("❌ HF_TOKEN tidak ditemukan di file .env")
+# ============ CONFIG GEMINI ============
+GEMINI_KEY = os.getenv("GEMINI_API_KEY")
+if not GEMINI_KEY:
+    raise RuntimeError("❌ GEMINI_API_KEY tidak ditemukan di file .env")
 
-client = OpenAI(
-    base_url="https://router.huggingface.co/v1",
-    api_key=os.getenv("HF_TOKEN"),
-)
+genai.configure(api_key=GEMINI_KEY)
 
-MODEL_NAME = "microsoft/Phi-3-mini-4k-instruct"
+MODEL_NAME = "gemini-2.5-flash"
 
 # ============ ENDPOINT UTAMA ============
 @app.post("/analyze", response_model=AnalysisResult)
 async def analyze_career(assessment: CareerAssessment):
-    # Buat prompt berdasarkan input user
+
     prompt = f"""
 Kamu adalah konsultan karier profesional berpengalaman di Indonesia.
 Berikut data klien:
@@ -67,23 +63,16 @@ Jawaban Assessment:
 
 Tugasmu:
 1. Analisis kepribadian dan minat klien (3-4 kalimat)
-2. Berikan 3 rekomendasi karier paling cocok (tulis dalam format daftar bernomor)
+2. Berikan 3 rekomendasi karier paling cocok (format daftar bernomor)
 3. Tambahkan saran pengembangan diri singkat (1-2 kalimat)
-Gunakan bahasa Indonesia profesional.
+Gunakan Bahasa Indonesia profesional.
 """
 
     try:
-        completion = client.chat.completions.create(
-            model=MODEL_NAME,
-            messages=[
-                {"role": "system", "content": "Kamu adalah konsultan karier profesional."},
-                {"role": "user", "content": prompt},
-            ],
-            temperature=0.7,
-            max_tokens=600,
-        )
+        model = genai.GenerativeModel(MODEL_NAME)
+        response = model.generate_content(prompt)
+        text = response.text.strip()
 
-        text = completion.choices[0].message.content.strip()
         careers = extract_careers_from_text(text)
 
         return AnalysisResult(

@@ -4,7 +4,7 @@
       <div class="grid md:grid-cols-4 gap-8 mb-8">
         <div class="col-span-1 flex flex-col items-start">
           <div class="flex items-center space-x-2 mb-3">
-            <img :src="logoIcon" alt="Career.AI Logo" class="w-10 h-10" />
+            <img :src="logoIcon" alt="Career.AI Logo" class="w-auto h-9" />
             <h2 class="text-xl font-semibold text-[#00B8D9]">Career.AI</h2>
           </div>
           <p class="text-sm leading-relaxed">

@@ -3,8 +3,8 @@
     id="about" 
     class="relative h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50 flex flex-col justify-center items-center text-center px-6 md:px-20 overflow-hidden"
   >
-    <!-- Bright Cyan Background Circles - Same as FAQ -->
-    <div class="absolute inset-0 pointer-events-none">
+    <!-- Absolute Bright Cyan Background Circles -->
+    <div class="absolute inset-0 pointer-events-none z-0">
       <!-- Large gradient circle top-left (BLUR) -->
       <div class="absolute -top-48 -left-48 w-[600px] h-[600px] bg-gradient-to-br from-cyan-300 to-blue-400 rounded-full opacity-40 blur-3xl"></div>
       
@@ -30,8 +30,11 @@
       <div class="absolute top-1/2 left-1/3 w-72 h-72 bg-cyan-300 rounded-full opacity-20"></div>
     </div>
 
+    <!-- Dark Overlay untuk gelapin background -->
+    <div class="absolute inset-0 bg-black/10 pointer-events-none z-0"></div>
+
     <!-- Glassmorphism Overlay -->
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)] pointer-events-none z-0"></div>
 
     <!-- Content -->
     <div class="relative z-10 max-w-6xl border-2 rounded-3xl bg-white/70 p-10 md:p-12 border-cyan-200/60 backdrop-blur-md shadow-xl animate-fadeIn">

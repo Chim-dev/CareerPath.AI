@@ -2,8 +2,8 @@
   <section
     class="relative min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50 flex items-center justify-center py-20 overflow-hidden"
   >
-    <!-- Fixed Bright Cyan Background Circles -->
-    <div class="fixed inset-0 pointer-events-none z-0">
+    <!-- Absolute Bright Cyan Background Circles -->
+    <div class="absolute inset-0 pointer-events-none z-0">
       <!-- Large gradient circle top-left (BLUR) -->
       <div class="absolute -top-48 -left-48 w-[600px] h-[600px] bg-gradient-to-br from-cyan-300 to-blue-400 rounded-full opacity-40 blur-3xl"></div>
       
@@ -29,8 +29,11 @@
       <div class="absolute top-1/2 left-1/3 w-72 h-72 bg-cyan-300 rounded-full opacity-20"></div>
     </div>
 
+    <!-- Dark Overlay untuk gelapin background -->
+    <div class="absolute inset-0 bg-white/20 pointer-events-none z-0"></div>
+
     <!-- Glassmorphism Overlay -->
-    <div class="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)] pointer-events-none z-0"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)] pointer-events-none z-0"></div>
 
     <!-- Contact Form Content -->
     <div class="relative z-10 w-full max-w-2xl bg-white/70 backdrop-blur-md rounded-3xl shadow-xl p-8 md:p-10 border-2 border-cyan-200/60 mx-4">
@@ -76,7 +79,7 @@
         <button
           type="submit"
           :disabled="loading"
-          class="w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white py-3 rounded-xl font-semibold hover:from-cyan-500 hover:to-blue-600 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+          class="w-full bg-cyan-400 text-white py-3 rounded-xl font-semibold hover:bg-white hover:text-cyan-400 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
         >
           {{ loading ? "Sending..." : "Send Message" }}
         </button>

@@ -7,24 +7,29 @@
       </p>
     </div>
 
-    <div v-for="(category, index) in careerCategories" :key="index"
-      class="max-w-6xl mx-auto mb-20 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-10 flex flex-col md:flex-row items-center md:items-start gap-10">
-      <div class="flex-shrink-0">
-        <img :src="category.animation" :alt="category.name" class="w-72 h-72 object-contain" />
-      </div>
+    <!-- Ubah jadi grid -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div
+        v-for="(category, index) in careerCategories"
+        :key="index"
+        class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-10 flex flex-col items-center text-center"
+      >
+        <img :src="category.animation" :alt="category.name" class="w-56 h-56 object-contain mb-6" />
 
-      <div class="text-left flex-1">
-        <h3 class="text-3xl font-semibold text-[#00B8D9] mb-4">
+        <h3 class="text-2xl font-semibold text-[#00B8D9] mb-4">
           {{ category.name }}
         </h3>
+
         <p class="text-zinc-500 mb-8">
           {{ category.intro }}
         </p>
-        <button @click="goToTest(category.name)"
-          class="px-6 py-3 bg-[#00B8D9] text-white rounded-lg hover:bg-white hover:text-[#00B8D9] border border-[#00B8D9] transition-all duration-300 font-medium">
+
+        <button
+          @click="goToTest(category.name)"
+          class="px-6 py-3 bg-[#00B8D9] text-white rounded-lg hover:bg-white hover:text-[#00B8D9] border border-[#00B8D9] transition-all duration-300 font-medium"
+        >
           Mulai Tes
         </button>
-
       </div>
     </div>
   </section>
@@ -40,7 +45,7 @@ const router = useRouter()
 const goToTest = (category) => {
   router.push({
     name: 'Test',
-    query: { category } // kirim kategori lewat query string
+    query: { category }
   })
 }
 

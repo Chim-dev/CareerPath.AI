@@ -227,7 +227,7 @@ async function submitAnswers() {
 }
 
 function goBack() {
-  router.push("/career")
+  router.push("/")
 }
 </script>
 
