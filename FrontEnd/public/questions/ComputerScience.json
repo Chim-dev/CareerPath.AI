@@ -1,52 +1,102 @@
 [
   {
     "id": 1,
-    "question": "Anda tertarik membuat tampilan situs web yang interaktif dan menarik (UI/UX)?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik merancang dan mengimplementasikan arsitektur aplikasi berskala besar (microservices, distributed systems, event-driven)?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 2,
-    "question": "Anda lebih suka mengatur logika dan struktur data di balik aplikasi (backend logic)?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda menikmati merancang struktur data dan algoritma yang efisien untuk menyelesaikan masalah komputasi yang kompleks (misalnya pathfinding, optimasi, scheduling)?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 3,
-    "question": "Anda suka membuat game dan ingin mempelajari mesin game seperti Unity atau Unreal Engine?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik mendalami rekayasa perangkat lunak (software engineering) mulai dari requirement, design pattern, testing, sampai deployment berulang (CI/CD)?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 4,
-    "question": "Anda tertarik membuat aplikasi yang dapat berjalan di ponsel (Android/iOS)?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda suka bekerja di sisi backend: merancang API, mengelola database, menangani concurrency, dan mengoptimalkan query untuk performa tinggi?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 5,
-    "question": "Anda suka bekerja dengan data besar, statistik, dan membuat prediksi menggunakan algoritma (machine learning)?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik menjadi software engineer yang membangun aplikasi web end-to-end dengan framework modern (misalnya React, Vue, Django, Spring, .NET)?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 6,
-    "question": "Anda menikmati mengoptimalkan performa sistem agar lebih efisien dan cepat (backend optimization)?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda menikmati membuat tampilan user interface yang responsif, memperhatikan UX, aksesibilitas, dan detail visual di front-end (HTML/CSS/JS/Framework)?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 7,
-    "question": "Anda merasa puas melihat hasil visual langsung dari kode yang Anda tulis (misalnya tampilan website atau game)?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik mengembangkan aplikasi mobile native atau cross-platform (Android, iOS, Flutter, React Native) dan mengoptimalkan pengalaman pengguna di perangkat mobile?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 8,
-    "question": "Anda ingin mengembangkan kecerdasan buatan yang dapat mengenali suara, gambar, atau teks?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda suka mempelajari cara kerja jaringan komputer, protokol (TCP/IP, HTTP), dan ingin berkarir sebagai network engineer atau system administrator?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 9,
-    "question": "Anda tertarik mempelajari keamanan siber (cybersecurity) untuk melindungi sistem dan data?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik pada keamanan siber (cybersecurity): penetration testing, secure coding, analisis malware, dan merancang sistem yang tahan serangan?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 10,
-    "question": "Anda ingin bekerja di proyek kolaboratif besar menggunakan framework atau teknologi modern seperti React, Django, atau TensorFlow?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda menikmati mengutak-atik sistem operasi, kernel, memory management, dan tertarik bekerja di bidang low-level programming (C/C++, Rust, embedded)?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 11,
+    "question": "Anda tertarik menjadi game developer yang merancang gameplay, AI musuh, dan sistem fisika menggunakan game engine seperti Unity atau Unreal Engine?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 12,
+    "question": "Anda lebih suka fokus pada quality assurance dan testing otomatis (unit test, integration test, end-to-end test) untuk menjamin kualitas perangkat lunak?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 13,
+    "question": "Anda menikmati mengelola infrastruktur, server, container (Docker, Kubernetes), dan otomatisasi deployment sebagai DevOps atau Site Reliability Engineer (SRE)?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 14,
+    "question": "Anda tertarik bekerja dengan database (relasional dan NoSQL), merancang skema, indexing, dan optimasi query sebagai database administrator atau data engineer?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 15,
+    "question": "Anda suka melakukan riset di bidang komputer (algoritma baru, teori komputasi, AI, grafika komputer) dan tertarik menjadi peneliti atau akademisi di universitas/lab riset?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 16,
+    "question": "Anda tertarik mengembangkan sistem kecerdasan buatan (machine learning, deep learning, NLP, computer vision) dan mengimplementasikannya dalam produk nyata sebagai ML Engineer atau AI Engineer?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 17,
+    "question": "Anda menikmati mengoptimalkan performa program (profiling, memory optimization, parallel computing, GPU programming) untuk aplikasi komputasi berat atau real-time?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 18,
+    "question": "Anda tertarik menggabungkan aspek bisnis dan teknologi, misalnya menjadi product manager di perusahaan teknologi yang menjembatani user, bisnis, dan tim engineering?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 19,
+    "question": "Anda suka menjelaskan konsep teknis kepada orang non-teknis dan tertarik menjadi technical writer, trainer, atau developer advocate di perusahaan teknologi?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 20,
+    "question": "Anda tertarik bekerja di bidang cloud computing (AWS, Azure, GCP), merancang solusi cloud, dan memigrasikan sistem on-premise ke arsitektur cloud modern sebagai cloud engineer atau cloud architect?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   }
 ]

@@ -25,70 +25,126 @@ app.add_middleware(
 class CareerAssessment(BaseModel):
     category: str
     gender: str
+    questions: List[str]     # <==== TAMBAHAN
     answers: List[str]
 
 class AnalysisResult(BaseModel):
     analysis: str
     career_recommendations: List[str]
+    development_advice: str
     confidence_score: float
 
-# ============ HELPER ============
-def extract_careers_from_text(text: str) -> List[str]:
-    pattern = r'\d+[\.)]\s*([A-Z][A-Za-z\s/&-]+)'
-    matches = re.findall(pattern, text)
-    return [m.strip() for m in matches][:5] if matches else ["(AI tidak mendeteksi karier)"]
+# ============ CLEAN MARKDOWN ============
+def clean_markdown(text: str) -> str:
+    text = re.sub(r'\*\*(.*?)\*\*', r'\1', text)
+    text = re.sub(r'\*(.*?)\*', r'\1', text)
+    text = re.sub(r'[_~`]', '', text)
+    text = re.sub(r'\s+', ' ', text)
+    return text.strip()
+
+# ============ EXTRACT KARIR ============
+def extract_careers(text: str) -> List[str]:
+    pattern = r'\d+\s*[\.\)]\s*([A-Za-zÀ-ÿ\'\-\s/&]+)'
+    careers = re.findall(pattern, text)
+    return [c.strip() for c in careers][:3]
+
+# ============ EXTRACT SARAN ============
+def extract_advice(text: str) -> str:
+    match = re.search(r"SARAN PENGEMBANGAN DIRI:(.*)", text, re.DOTALL)
+    return match.group(1).strip() if match else ""
 
 # ============ CONFIG GEMINI ============
 GEMINI_KEY = os.getenv("GEMINI_API_KEY")
 if not GEMINI_KEY:
-    raise RuntimeError("❌ GEMINI_API_KEY tidak ditemukan di file .env")
+    raise RuntimeError("❌ GEMINI_API_KEY tidak ditemukan di .env")
 
 genai.configure(api_key=GEMINI_KEY)
-
-MODEL_NAME = "gemini-2.5-flash"
+MODEL_NAME = "gemini-2.5-pro"
 
 # ============ ENDPOINT UTAMA ============
 @app.post("/analyze", response_model=AnalysisResult)
 async def analyze_career(assessment: CareerAssessment):
 
-    prompt = f"""
-Kamu adalah konsultan karier profesional berpengalaman di Indonesia.
-Berikut data klien:
+    # --- Deteksi minat Game Development ---
+    game_keywords = ["game", "unity", "unreal", "gamedev", "developer game", "game designer"]
+    user_text = " ".join(assessment.answers).lower()
+    game_interest = any(kw in user_text for kw in game_keywords)
 
-Jenis Kelamin: {assessment.gender}
-Kategori Minat: {assessment.category}
-
-Jawaban Assessment:
-{chr(10).join([f"{i+1}. {ans}" for i, ans in enumerate(assessment.answers)])}
-
-Tugasmu:
-1. Analisis kepribadian dan minat klien (3-4 kalimat)
-2. Berikan 3 rekomendasi karier paling cocok (format daftar bernomor)
-3. Tambahkan saran pengembangan diri singkat (1-2 kalimat)
-Gunakan Bahasa Indonesia profesional.
+    game_instruction = ""
+    if game_interest:
+        game_instruction = """
+Penting: Klien menunjukkan minat pada Game Development. Maka rekomendasi karier
+wajib berfokus pada bidang seperti:
+- Game Developer (Unity atau Unreal Engine)
+- Gameplay Programmer
+- Game Designer
+- Technical Game Designer
+- Game AI Engineer
 """
+
+    # --- Gabungkan soal + jawaban ---
+    qna_formatted = "\n".join(
+        [
+            f"{i+1}. {assessment.questions[i]}\n   Jawaban: {assessment.answers[i]}"
+            for i in range(len(assessment.questions))
+        ]
+    )
+
+    # --- PROMPT FINAL ---
+    prompt = f"""
+Kamu adalah konsultan karier profesional di Indonesia.
+
+Gunakan bahasa informal, santai tapi tetap sopan (seperti ngobrol ke user).
+
+Format output WAJIB persis seperti ini:
+
+ANALISIS:
+(isi 3-5 kalimat)
+
+SARAN PENGEMBANGAN DIRI:
+(isi 1-2 kalimat)
+
+REKOMENDASI KARIER:
+1. Karier pertama
+2. Karier kedua
+3. Karier ketiga
+
+
+Dilarang menggunakan simbol markdown seperti **, *, _, ~, atau ```.
+
+{game_instruction}
+
+Kategori Penilaian: {assessment.category}
+Jenis Kelamin Klien: {assessment.gender}
+
+Soal dan Jawaban Klien:
+{qna_formatted}
+""".strip()
 
     try:
         model = genai.GenerativeModel(MODEL_NAME)
         response = model.generate_content(prompt)
-        text = response.text.strip()
 
-        careers = extract_careers_from_text(text)
+        text = clean_markdown(response.text)
+        careers = extract_careers(text)
+        advice = extract_advice(text)
 
         return AnalysisResult(
             analysis=text,
-            career_recommendations=careers[:3],
-            confidence_score=0.9 if len(text) > 200 else 0.7,
+            career_recommendations=careers,
+            development_advice=advice,
+            confidence_score=0.95 if len(text) > 200 else 0.80,
         )
 
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error dari server: {e}")
+        raise HTTPException(status_code=500, detail=f"Server Error: {e}")
 
-# ============ ROUTES ============
+# ============ ROOT ============
 @app.get("/")
 def root():
-    return {"status": "✅ Backend aktif", "model": MODEL_NAME, "endpoint": "/analyze"}
+    return {"status": "Backend OK", "model": MODEL_NAME, "endpoint": "/analyze"}
 
+# ============ RUN ============
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

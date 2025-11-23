@@ -1,15 +1,15 @@
 <template>
-  <section class="bg-linear-to-b from-cyan-50 to-white py-12 px-6 md:px-12 shadow-sm">
+  <section class="bg-[#FDFDF9] py-12 px-6 md:px-12 shadow-sm">
     <div class="max-w-[1500px] mx-auto bg-gray-100/50 rounded-3xl px-8 md:px-10 py-15">
       <div class="text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-cyan-500 mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-cyan-500 mb-10" data-aos="fade-up" data-aos-delay="500">
           Cara Kerjanya
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 text-center">
 
-          <div class="flex flex-col items-center space-y-3">
-            <div
+          <div class="flex flex-col items-center space-y-3 "data-aos="fade-right" data-aos-delay="500">
+            <div data-aos="fade-right" data-aos-delay="500"
               class="w-14 h-14 flex items-center justify-center rounded-full border-2 border-cyan-500 text-cyan-600 font-bold text-xl"
             >
               1
@@ -23,8 +23,8 @@
           </div>
 
 
-          <div class="flex flex-col items-center space-y-3">
-            <div
+          <div class="flex flex-col items-center space-y-3" data-aos="fade-right" data-aos-delay="700">
+            <div data-aos="fade-right" data-aos-delay="700"
               class="w-14 h-14 flex items-center justify-center rounded-full border-2 border-cyan-500 text-cyan-600 font-bold text-xl"
             >
               2
@@ -38,8 +38,8 @@
           </div>
 
 
-          <div class="flex flex-col items-center space-y-3">
-            <div
+          <div class="flex flex-col items-center space-y-3" data-aos="fade-right" data-aos-delay="900">
+            <div data-aos="fade-right" data-aos-delay="900"
               class="w-14 h-14 flex items-center justify-center rounded-full border-2 border-cyan-500 text-cyan-600 font-bold text-xl"
             >
               3

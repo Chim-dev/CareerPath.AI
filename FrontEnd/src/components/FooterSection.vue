@@ -1,11 +1,10 @@
 <template>
-  <footer class="bg-white border-t border-gray-200 py-12 text-gray-600">
+  <footer class="bg-[#FDFDF9] border-t border-gray-200 py-12 text-gray-600">
     <div class="max-w-7xl mx-auto px-6 md:px-12">
       <div class="grid md:grid-cols-4 gap-8 mb-8">
         <div class="col-span-1 flex flex-col items-start">
           <div class="flex items-center space-x-2 mb-3">
             <img :src="logoIcon" alt="Career.AI Logo" class="w-auto h-9" />
-            <h2 class="text-xl font-semibold text-[#00B8D9]">Career.AI</h2>
           </div>
           <p class="text-sm leading-relaxed">
             Tes karier berbasis AI untuk membantu mahasiswa dan profesional
@@ -16,7 +15,7 @@
         <div>
           <h3 class="font-semibold text-gray-800 mb-3">Explore</h3>
           <ul class="space-y-2 text-sm">
-            <li><a href="/" class="hover:text-[#00B8D9] transition">Home</a></li>
+            <li><a href="/career" class="hover:text-[#00B8D9] transition">Home</a></li>
             <li><a href="/about" class="hover:text-[#00B8D9] transition">About Us</a></li>
             <li><a href="/career" class="hover:text-[#00B8D9] transition">Career Path</a></li>
             <li><a href="#contact" class="hover:text-[#00B8D9] transition">Contact</a></li>

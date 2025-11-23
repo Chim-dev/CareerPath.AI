@@ -1,5 +1,5 @@
 <template>
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-[#FDFDF9]">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-8 p-6 md:p-10
                bg-cyan-50/40 backdrop-blur-sm 

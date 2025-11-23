@@ -199,6 +199,7 @@ async function submitAnswers() {
   const payload = {
     category: props.category,
     gender: selectedGender.value,
+    questions: questions.value.map(q => q.question),
     answers: selectedAnswers.value,
   }
 

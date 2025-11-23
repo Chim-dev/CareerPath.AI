@@ -1,7 +1,7 @@
-import { reactive } from 'vue'
+import { reactive } from "vue";
 
 export const resultStore = reactive({
-  analysis: '',
+  analysis: "",
   recommendations: [],
   confidence: 0,
-})
+});

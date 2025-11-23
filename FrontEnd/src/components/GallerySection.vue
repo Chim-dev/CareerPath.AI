@@ -2,11 +2,11 @@
   <section class="py-24">
 
     <!-- konten -->
-    <div class="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center z-10">
+    <div  class="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center z-10" data-aos="fade-up" data-aos-delay="500">
       <div
         v-for="(item, index) in galleryItems"
         :key="index"
-        class="flex flex-col items-center text-center space-y-6 p-6 rounded-3xl bg-white/60 backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300"
+        class="flex flex-col items-center text-center space-y-6 p-6 rounded-3xl bg-[#FAFAF9] backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300"
       >
         <img
           :src="item.image"
@@ -16,7 +16,7 @@
         <h2 class="text-2xl font-semibold text-[#00B8D9]">
           {{ item.titles }}
         </h2>
-        <p class="text-zinc-500 leading-relaxed max-w-md">
+        <p class="text-zinc-800 leading-relaxed max-w-md">
           {{ item.paragraph }}
         </p>
       </div>

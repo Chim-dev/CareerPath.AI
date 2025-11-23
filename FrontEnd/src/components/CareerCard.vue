@@ -1,5 +1,5 @@
 <template>
-  <section class="py-24 bg-gradient-to-b from-white to-blue-50" id="career">
+  <section class="py-24 bg-[#FDFDF9]" id="career">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-bold mb-4 text-[#00B8D9]">Temukan Jalur Kariermu</h2>
       <p class="text-zinc-500 max-w-2xl mx-auto">
@@ -8,12 +8,9 @@
     </div>
 
     <!-- Ubah jadi grid -->
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-      <div
-        v-for="(category, index) in careerCategories"
-        :key="index"
-        class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-10 flex flex-col items-center text-center"
-      >
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10" data-aos="fade-up" data-aos-delay="600">
+      <div v-for="(category, index) in careerCategories" :key="index"
+        class="bg-[#FAFAF9] rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-10 flex flex-col items-center text-center">
         <img :src="category.animation" :alt="category.name" class="w-56 h-56 object-contain mb-6" />
 
         <h3 class="text-2xl font-semibold text-[#00B8D9] mb-4">
@@ -24,10 +21,8 @@
           {{ category.intro }}
         </p>
 
-        <button
-          @click="goToTest(category.name)"
-          class="px-6 py-3 bg-[#00B8D9] text-white rounded-lg hover:bg-white hover:text-[#00B8D9] border border-[#00B8D9] transition-all duration-300 font-medium"
-        >
+        <button @click="goToTest(category.name)"
+          class="px-6 py-3 bg-[#00B8D9] text-white rounded-lg hover:bg-white hover:text-[#00B8D9] border border-[#00B8D9] transition-all duration-300 font-medium">
           Mulai Tes
         </button>
       </div>

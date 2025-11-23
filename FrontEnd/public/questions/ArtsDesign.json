@@ -1,52 +1,102 @@
 [
   {
     "id": 1,
-    "question": "Anda menikmati membuat karya visual atau desain?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik menjadi graphic designer yang membuat materi visual untuk brand (logo, poster, kemasan, konten media sosial) dengan fokus pada komposisi, warna, dan tipografi yang kuat?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 2,
-    "question": "Anda memiliki perhatian besar terhadap detail estetika?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda menikmati merancang antarmuka dan pengalaman pengguna (UI/UX) untuk website atau aplikasi, termasuk wireframe, prototipe interaktif, dan pengujian usability dengan pengguna nyata?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 3,
-    "question": "Anda sering memiliki ide kreatif dalam memecahkan masalah?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik memperdalam desain produk digital (product design) yang menggabungkan riset pengguna, desain interaksi, dan kolaborasi dengan tim engineering dan bisnis untuk membangun fitur yang bernilai?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 4,
-    "question": "Anda lebih menyukai pekerjaan visual daripada teknis?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda suka membuat ilustrasi digital atau tradisional (karakter, environment, editorial) dan tertarik berkarir sebagai illustrator untuk buku, game, film, atau produk digital lainnya?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 5,
-    "question": "Anda sering mengamati warna, bentuk, dan gaya di sekitar Anda?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik mengerjakan concept art untuk game atau film (character design, environment concept, keyframes) yang bertugas membangun visual awal dunia dan suasana cerita?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 6,
-    "question": "Anda tertarik pada dunia desain grafis atau ilustrasi digital?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda menikmati membuat animasi 2D atau 3D (motion graphics, explainer video, title sequence) dan tertarik bekerja sebagai motion designer untuk brand, agensi, atau studio kreatif?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 7,
-    "question": "Anda lebih senang mengekspresikan diri melalui karya seni?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik pada 3D modeling dan texturing (karakter, objek, environment) untuk game, film, atau visualisasi produk menggunakan software seperti Blender, Maya, atau ZBrush?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 8,
-    "question": "Anda menikmati proyek yang membutuhkan imajinasi tinggi?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda suka merancang tampilan dan interaksi antarmuka game (HUD, menu, icon) sebagai UI artist, serta mengoptimalkan pengalaman pemain sebagai UX designer di industri game?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 9,
-    "question": "Anda suka membuat sesuatu terlihat menarik dan harmonis?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik menjadi game artist yang mengerjakan asset visual (karakter, environment, props, efek visual) dan berkolaborasi erat dengan programmer dan game designer di tim pengembangan game?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 10,
-    "question": "Anda ingin berkarier di bidang desain atau industri kreatif?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda menikmati memadukan seni dan teknologi untuk membuat instalasi interaktif, generative art, atau pengalaman multimedia (projection mapping, AR/VR) sebagai creative technologist atau new media artist?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 11,
+    "question": "Anda tertarik pada branding dan identitas visual, menyusun sistem desain lengkap (logo system, warna, tipografi, grid, guideline) yang konsisten di berbagai touchpoint brand sebagai brand designer atau art director junior?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 12,
+    "question": "Anda suka mendesain tata letak dan layout (majalah, buku, situs berita, katalog) dengan fokus pada hirarki visual dan kenyamanan membaca sebagai layout designer atau editorial designer?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 13,
+    "question": "Anda tertarik pada fotografi atau videografi, mengatur komposisi, cahaya, dan editing untuk kebutuhan komersial (iklan, konten digital, dokumenter) sebagai photographer atau videographer profesional?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 14,
+    "question": "Anda menikmati merancang pakaian atau koleksi fashion (dari sketsa sampai produksi), memperhatikan tren dan material, dan tertarik berkarir sebagai fashion designer atau costume designer?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 15,
+    "question": "Anda tertarik pada interior design: menata ruang, memilih material, warna, furniture, dan pencahayaan untuk menciptakan suasana tertentu di rumah, kantor, atau ruang publik?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 16,
+    "question": "Anda suka berdiskusi dengan klien, memahami kebutuhan dan visi mereka, lalu menerjemahkannya ke dalam konsep visual dan moodboard sebagai langkah awal proses desain?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 17,
+    "question": "Anda tertarik mengajar, membuat konten edukasi desain (tutorial, course, workshop), dan membimbing orang lain mengembangkan skill kreatif sebagai design educator atau content creator di bidang kreatif?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 18,
+    "question": "Anda menikmati mengelola proyek kreatif (timeline, budget, koordinasi tim kreatif) dan tertarik menjadi creative project manager atau producer di agensi atau studio desain?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 19,
+    "question": "Anda tertarik membangun karir sebagai seniman independen (fine artist) yang membuat karya original, mengikuti pameran, menjual karya, atau menerima komisi khusus dari kolektor atau klien?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 20,
+    "question": "Anda melihat diri Anda di masa depan memimpin tim kreatif (art director, creative director) yang menentukan arah visual, quality bar, dan konsep besar untuk kampanye atau produk kreatif besar?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   }
 ]

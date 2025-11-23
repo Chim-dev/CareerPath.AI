@@ -4,9 +4,9 @@
       :class="[
         'transition-all duration-500 ease-in-out flex items-center justify-between w-full shadow-md px-6 py-6 md:px-10 md:py-5',
         isScrolled
-          ? 'bg-white/95 shadow-lg rounded-3xl scale-100 max-w-3xl text-cyan-500'
-          : 'bg-white/40 shadow-md rounded-3xl max-w-6xl backdrop-blur-2xl',
-        !isScrolled && isWhiteText ? 'text-white' : 'text-cyan-500'
+          ? 'bg-[#FDFDF9] shadow-lg rounded-3xl scale-100 max-w-3xl text-cyan-500'
+          : 'bg-[#FDFDF9] shadow-md rounded-3xl max-w-6xl ',
+        !isScrolled && isWhiteText ? 'text-cyan-500' : 'text-cyan-500'
       ]"
     >
       <!-- Logo -->
@@ -58,7 +58,7 @@
         v-if="isOpen"
         :class="[
           'absolute top-full left-0 right-0 mt-3 mx-4 backdrop-blur-md rounded-2xl shadow-md flex flex-col items-center space-y-4 py-5 px-4 md:hidden',
-          isWhiteText ? 'bg-white/10 text-white' : 'bg-white/95 text-cyan-600'
+          isWhiteText ? 'bg-white text-cyan-500' : 'bg-white/95 text-cyan-600'
         ]"
       >
         <li><a @click="closeMenu" href="/career" class="hover:text-cyan-400 transition">Home</a></li>

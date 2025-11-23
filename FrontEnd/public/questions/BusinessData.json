@@ -1,52 +1,102 @@
 [
   {
     "id": 1,
-    "question": "Anda tertarik menganalisis data untuk menemukan pola dan wawasan penting bagi bisnis?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik bekerja sebagai data analyst yang membersihkan data, membuat laporan, dan dashboard interaktif (misalnya dengan SQL, Excel, Power BI, atau Tableau) untuk menjawab pertanyaan bisnis?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 2,
-    "question": "Anda suka membuat keputusan berdasarkan angka, grafik, dan hasil analisis statistik?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda menikmati menggali pola dari data menggunakan statistik deskriptif dan inferensial (regresi, uji hipotesis, korelasi) untuk membantu pengambilan keputusan bisnis?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 3,
-    "question": "Anda tertarik memahami strategi pemasaran digital seperti SEO, iklan online, dan media sosial?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik menjadi data scientist yang membangun model machine learning untuk prediksi (churn, penjualan, rekomendasi produk) dan mengkomunikasikan hasilnya ke stakeholder bisnis?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 4,
-    "question": "Anda suka merencanakan arah bisnis, mengatur strategi pertumbuhan, dan mengelola tim?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda suka merancang pipeline data end-to-end (ETL/ELT), mengelola data warehouse atau data lake, dan membangun sistem data yang andal sebagai data engineer atau analytics engineer?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 5,
-    "question": "Anda tertarik memahami laporan keuangan, investasi, dan analisis risiko finansial?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik mengembangkan metrik dan KPI yang tepat untuk memonitor kinerja bisnis dan mengkomunikasikannya melalui dashboard BI sebagai business intelligence analyst?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 6,
-    "question": "Anda suka memvisualisasikan data menggunakan tools seperti Excel, Tableau, atau Power BI?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda menikmati menganalisis proses bisnis (AS-IS dan TO-BE), membuat diagram alur, dan mengidentifikasi area untuk perbaikan sebagai business analyst atau process analyst?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 7,
-    "question": "Anda merasa bersemangat untuk membangun bisnis atau startup sendiri dari awal?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik berinteraksi langsung dengan stakeholder untuk menggali kebutuhan (requirements elicitation), menyusun spesifikasi fungsional/non-fungsional, dan menjembatani tim bisnis dengan tim teknis?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 8,
-    "question": "Anda tertarik mempelajari perilaku konsumen untuk meningkatkan penjualan atau kepuasan pelanggan?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda suka melakukan analisis pasar dan perilaku konsumen menggunakan data (segmentasi, cohort analysis, A/B testing) sebagai marketing analyst atau growth analyst?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 9,
-    "question": "Anda suka menggabungkan logika bisnis dengan analisis data untuk menyelesaikan masalah nyata?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda tertarik menganalisis data keuangan (laporan laba rugi, arus kas, proyeksi) dan menggunakannya untuk pengambilan keputusan investasi atau budgeting sebagai financial analyst atau business controller?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   },
   {
     "id": 10,
-    "question": "Anda ingin berkarier di bidang seperti Business Analyst, Data Scientist, atau Product Manager?",
-    "options": ["Sangat Setuju", "Setuju","Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+    "question": "Anda menikmati melakukan eksperimen terkontrol (A/B testing, multivariate testing) pada produk digital dan menerjemahkan hasilnya menjadi rekomendasi perbaikan fitur sebagai product analyst atau UX analyst?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 11,
+    "question": "Anda tertarik bekerja di peran strategis seperti business strategist atau management consultant yang menggunakan analisis data dan kerangka bisnis (misalnya SWOT, 5 Forces, BCG Matrix) untuk menyusun rekomendasi tingkat manajemen?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 12,
+    "question": "Anda suka mengelola proyek transformasi data dan digital (data platform, BI, ERP, CRM) dari sisi manajemen proyek, timeline, dan koordinasi tim lintas fungsi sebagai project manager atau program manager?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 13,
+    "question": "Anda tertarik pada tata kelola data (data governance), kualitas data, dan kebijakan kepemilikan data perusahaan sebagai persiapan menuju peran seperti data steward atau chief data officer di masa depan?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 14,
+    "question": "Anda menikmati membuat storytelling dari data: mengubah angka dan grafik menjadi narasi yang mudah dipahami manajemen dan mendorong aksi konkret dari tim bisnis?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 15,
+    "question": "Anda tertarik mengerjakan optimasi operasi bisnis (supply chain, logistik, penjadwalan) menggunakan model matematis, simulasi, atau optimasi sebagai operations research analyst atau data-driven operations manager?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 16,
+    "question": "Anda suka menggabungkan pengetahuan bisnis dan teknologi data untuk merancang fitur produk berbasis data (misalnya rekomendasi, scoring, personalisasi) sebagai product manager di perusahaan data-driven?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 17,
+    "question": "Anda tertarik mengembangkan dan memantau model risiko (credit risk, fraud detection, operational risk) menggunakan data historis untuk lembaga keuangan atau fintech sebagai risk analyst atau quantitative analyst (quant)?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 18,
+    "question": "Anda menikmati menyusun requirement laporan regulasi dan kepatuhan (compliance reporting) berbasis data untuk otoritas (misalnya OJK, regulator pajak) sebagai reporting analyst atau compliance data specialist?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 19,
+    "question": "Anda tertarik berkarir di bidang customer insights atau UX research yang menggabungkan riset kualitatif (interview, survey) dengan analisis data kuantitatif untuk memahami perilaku pengguna secara menyeluruh?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
+  },
+  {
+    "id": 20,
+    "question": "Anda melihat diri Anda ke depan berperan di level manajemen (head of analytics, chief data officer, chief analytics officer) yang memimpin strategi data dan tim analitik di organisasi?",
+    "options": ["Sangat Setuju", "Setuju", "Netral", "Tidak Setuju", "Sangat Tidak Setuju"]
   }
 ]
