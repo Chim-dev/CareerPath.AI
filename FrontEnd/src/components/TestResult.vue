@@ -20,7 +20,6 @@
 
     <!-- Card with Enhanced Shadow -->
     <div
-      id="pdf-area"
       class="relative z-10 max-w-4xl mx-auto bg-white/95 backdrop-blur-xl shadow-2xl rounded-3xl border-2 border-cyan-200/70 overflow-hidden"
     >
       <!-- Header Section with Gradient -->
@@ -39,7 +38,7 @@
 
       <!-- Content Section -->
       <div class="p-8 md:p-12">
-        <!-- Analisis Section with Enhanced Cards -->
+        <!-- Analisis Section -->
         <div class="mb-12">
           <div class="flex items-center gap-3 mb-6">
             <div class="w-1 h-8 bg-gradient-to-b from-cyan-500 to-blue-500 rounded-full"></div>
@@ -65,7 +64,7 @@
           </div>
         </div>
 
-        <!-- Podium Section with Enhanced Design -->
+        <!-- Podium Section -->
         <div class="mb-12">
           <div class="flex items-center gap-3 mb-8">
             <div class="w-1 h-8 bg-gradient-to-b from-yellow-500 to-orange-500 rounded-full"></div>
@@ -84,12 +83,9 @@
                 }"
                 :style="{ animationDelay: `${i * 0.2}s` }"
               >
-                <!-- Medal Badge -->
                 <div
                   class="relative mb-4 transform transition-all duration-300 hover:scale-110"
-                  :class="{
-                    'animate-bounce-slow': i === 0,
-                  }"
+                  :class="{ 'animate-bounce-slow': i === 0 }"
                 >
                   <div
                     class="rounded-full flex items-center justify-center shadow-2xl"
@@ -102,17 +98,10 @@
                     <span class="text-4xl" v-if="i === 0">👑</span>
                     <span class="text-3xl font-bold text-white" v-else>{{ i + 1 }}</span>
                   </div>
-                  
-                  <!-- Shine Effect -->
-                  <div
-                    v-if="i === 0"
-                    class="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-30 animate-shine"
-                  ></div>
                 </div>
 
-                <!-- Career Name Card -->
                 <div
-                  class="relative rounded-2xl p-5 mb-3 text-center shadow-lg transform transition-all duration-300 hover:shadow-2xl"
+                  class="relative rounded-2xl p-5 mb-3 text-center shadow-lg"
                   :class="[
                     i === 0 ? 'bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-400 w-full md:w-48' : '',
                     i === 1 ? 'bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-gray-400 w-full md:w-44' : '',
@@ -131,30 +120,20 @@
                   </p>
                 </div>
 
-                <!-- Podium Base -->
                 <div
-                  class="rounded-t-2xl transition-all duration-300 shadow-xl"
+                  class="rounded-t-2xl shadow-xl"
                   :class="[
-                    i === 0 ? 'bg-gradient-to-t from-yellow-400 to-yellow-300 h-40 w-full md:w-48 border-t-4 border-yellow-200' : '',
-                    i === 1 ? 'bg-gradient-to-t from-gray-400 to-gray-300 h-32 w-full md:w-44 border-t-4 border-gray-200' : '',
-                    i === 2 ? 'bg-gradient-to-t from-orange-400 to-orange-300 h-24 w-full md:w-44 border-t-4 border-orange-200' : '',
+                    i === 0 ? 'bg-gradient-to-t from-yellow-400 to-yellow-300 h-40 w-full md:w-48' : '',
+                    i === 1 ? 'bg-gradient-to-t from-gray-400 to-gray-300 h-32 w-full md:w-44' : '',
+                    i === 2 ? 'bg-gradient-to-t from-orange-400 to-orange-300 h-24 w-full md:w-44' : '',
                   ]"
-                >
-                  <div class="h-full flex items-center justify-center">
-                    <span
-                      class="text-white font-black text-4xl md:text-6xl opacity-20"
-                      :class="{ 'text-5xl md:text-7xl': i === 0 }"
-                    >
-                      {{ i + 1 }}
-                    </span>
-                  </div>
-                </div>
+                ></div>
               </div>
             </template>
           </div>
         </div>
 
-        <!-- Confidence Score with Progress Bar -->
+        <!-- Confidence Score -->
         <div class="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl p-6 mb-10 border border-cyan-200 shadow-md">
           <div class="flex items-center justify-between mb-3">
             <span class="text-lg font-semibold text-gray-800 flex items-center gap-2">
@@ -172,22 +151,13 @@
           </div>
         </div>
 
-        <!-- Action Buttons with Enhanced Style -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <!-- Actions (PDF removed → hanya tombol kembali) -->
+        <div class="flex justify-center">
           <button
             @click="goBack"
-            class="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center gap-2"
+            class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 flex items-center gap-2"
           >
-            <span class="transform transition-transform group-hover:-translate-x-1">⬅</span>
-            <span>Kembali ke Tes</span>
-          </button>
-
-          <button
-            @click="downloadPDF"
-            class="group px-8 py-4 bg-white border-2 border-cyan-500 text-cyan-700 font-semibold rounded-xl hover:bg-cyan-50 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center gap-2"
-          >
-            <span class="transform transition-transform group-hover:scale-110">📄</span>
-            <span>Download PDF</span>
+            ⬅ Kembali ke Tes
           </button>
         </div>
       </div>
@@ -199,14 +169,13 @@
 import { computed } from "vue";
 import { useRouter } from "vue-router";
 import { resultStore } from "../stores/resultStores";
-import html2pdf from "html2pdf.js/dist/html2pdf.bundle.min.js";
 
 const router = useRouter();
 function goBack() {
   router.push("/career");
 }
 
-// Enhanced color blocks with border
+// Enhanced color blocks
 const colorBlocks = [
   "bg-red-50 border-red-400 text-red-900",
   "bg-blue-50 border-blue-400 text-blue-900",
@@ -215,7 +184,7 @@ const colorBlocks = [
   "bg-yellow-50 border-yellow-400 text-yellow-900",
 ];
 
-// Emoji list for analysis blocks
+// Emoji list
 const emojiList = ["💡", "🎯", "⭐", "🚀", "💼"];
 
 // Split analysis text
@@ -227,30 +196,16 @@ const analysisBlocks = computed(() => {
     .filter((b) => b.length > 0);
 });
 
-// Build Podium
+// Podium
 const podium = computed(() => {
   const list = resultStore.recommendations || [];
-  if (list.length < 3) {
-    return ["Menunggu data", "Menunggu data", "Menunggu data"];
-  }
+  if (list.length < 3) return ["Menunggu data", "Menunggu data", "Menunggu data"];
   return [list[0], list[1], list[2]];
 });
-
-// PDF Export
-function downloadPDF() {
-  const element = document.getElementById("pdf-area");
-  const opt = {
-    margin: 0.5,
-    filename: "career-analysis.pdf",
-    image: { type: "jpeg", quality: 0.98 },
-    html2canvas: { scale: 2, useCORS: true },
-    jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
-  };
-  html2pdf().from(element).set(opt).save();
-}
 </script>
 
 <style scoped>
+/* semua animation sama, tidak dihapus */
 @keyframes pulse-slow {
   0%, 100% { opacity: 0.4; transform: scale(1); }
   50% { opacity: 0.6; transform: scale(1.05); }
@@ -267,14 +222,8 @@ function downloadPDF() {
 }
 
 @keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes bounce-slow {
@@ -282,40 +231,14 @@ function downloadPDF() {
   50% { transform: translateY(-10px); }
 }
 
-@keyframes shine {
-  0% { transform: translateX(-100%) rotate(45deg); }
-  100% { transform: translateX(200%) rotate(45deg); }
-}
-
 @keyframes progress {
   from { width: 0; }
 }
 
-.animate-pulse-slow {
-  animation: pulse-slow 8s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-float-reverse {
-  animation: float-reverse 7s ease-in-out infinite;
-}
-
-.animate-slide-in {
-  animation: slide-in 0.6s ease-out forwards;
-}
-
-.animate-bounce-slow {
-  animation: bounce-slow 2s ease-in-out infinite;
-}
-
-.animate-shine {
-  animation: shine 3s ease-in-out infinite;
-}
-
-.animate-progress {
-  animation: progress 1.5s ease-out;
-}
+.animate-pulse-slow { animation: pulse-slow 8s ease-in-out infinite; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-reverse { animation: float-reverse 7s ease-in-out infinite; }
+.animate-slide-in { animation: slide-in 0.6s ease-out forwards; }
+.animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
+.animate-progress { animation: progress 1.5s ease-out; }
 </style>

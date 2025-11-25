@@ -1,11 +1,11 @@
 <template>
-  <div class="fixed top-0 left-0 w-full z-50 flex justify-center pt-4 px-4">
+  <div class="fixed top-0 left-0 w-full z-50 flex justify-center pt-1 px-4">
     <nav
       :class="[
-        'transition-all duration-500 ease-in-out flex items-center justify-between w-full shadow-md px-6 py-6 md:px-10 md:py-5',
+        'transition-all duration-500 ease-in-out flex items-center justify-between w-full shadow-md px-6 py-6 md:px-10 md:py-4',
         isScrolled
           ? 'bg-[#FDFDF9] shadow-lg rounded-3xl scale-100 max-w-3xl text-cyan-500'
-          : 'bg-[#FDFDF9] shadow-md rounded-3xl max-w-6xl ',
+          : 'bg-[#FDFDF9] shadow-md rounded-3xl max-w-6xl',
         !isScrolled && isWhiteText ? 'text-cyan-500' : 'text-cyan-500'
       ]"
     >

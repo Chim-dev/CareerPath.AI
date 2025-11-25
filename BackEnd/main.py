@@ -39,8 +39,12 @@ def clean_markdown(text: str) -> str:
     text = re.sub(r'\*\*(.*?)\*\*', r'\1', text)
     text = re.sub(r'\*(.*?)\*', r'\1', text)
     text = re.sub(r'[_~`]', '', text)
-    text = re.sub(r'\s+', ' ', text)
+
+    # ❗ penting: jangan hilangkan newline
+    text = re.sub(r'[ \t]+', ' ', text)
+
     return text.strip()
+
 
 # ============ EXTRACT KARIR ============
 def extract_careers(text: str) -> List[str]:
@@ -98,16 +102,18 @@ Gunakan bahasa informal, santai tapi tetap sopan (seperti ngobrol ke user).
 
 Format output WAJIB persis seperti ini:
 
-ANALISIS:
+paragraf ANALISIS:
 (isi 3-5 kalimat)
 
-SARAN PENGEMBANGAN DIRI:
+paragraf SARAN PENGEMBANGAN DIRI:
 (isi 1-2 kalimat)
 
-REKOMENDASI KARIER:
+paragraf atau section tersendiri untuk REKOMENDASI KARIER:
 1. Karier pertama
 2. Karier kedua
 3. Karier ketiga
+4. Karier keempat
+5. Karier kelima
 
 
 Dilarang menggunakan simbol markdown seperti **, *, _, ~, atau ```.
