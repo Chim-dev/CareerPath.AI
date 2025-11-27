@@ -1,7 +1,7 @@
 <template>
   <section
     id="about"
-    class="relative w-full py-24 px-6 md:px-16 bg-white overflow-hidden"
+    class="relative w-full xl:py-30 2xl:py-40 py-20 px-6 md:px-16 bg-white overflow-hidden"
   >
     <!-- Background gradient halus -->
     <div
@@ -90,20 +90,20 @@ import aboutImg from "../assets/about-img (1).jpg";
 @keyframes fadeLeft {
   from {
     opacity: 0;
-    transform: translateX(40px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
 /* Utility Classes */
 .animation-fade-up {
-  animation: fadeUp 1s ease-out forwards;
+  animation: fadeUp 0.5s ease-out forwards;
 }
 
 .animation-fade-left {
-  animation: fadeLeft 1s ease-out forwards;
+  animation: fadeLeft 0.6s ease-out forwards;
 }
 </style>
