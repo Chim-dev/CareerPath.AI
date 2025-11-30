@@ -109,9 +109,9 @@ SARAN PENGEMBANGAN DIRI:
 (isi 1-2 kalimat)
 
 REKOMENDASI KARIER:
-1. Karier pertama
-2. Karier kedua
-3. Karier ketiga
+1. Karier pertama (yang paling sesuai)
+2. Karier kedua (pilihan alternatif)
+3. Karier ketiga (pilihan alternatif)
 4. Karier keempat
 5. Karier kelima
 
