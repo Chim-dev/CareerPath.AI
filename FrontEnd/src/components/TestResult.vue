@@ -30,7 +30,7 @@
             <span class="text-white font-semibold text-sm">Assessment Completed</span>
           </div>
           <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-2 drop-shadow-lg">
-            📊 Hasil Analisis Karier
+             Hasil Analisis Karier
           </h2>
           <p class="text-cyan-50 text-lg">Temukan potensi terbaik Anda</p>
         </div>
@@ -185,7 +185,7 @@ const colorBlocks = [
 ];
 
 // Emoji list
-const emojiList = ["💡", "🎯", "⭐", "🚀", "💼"];
+const emojiList = ["", "", "", "", ""];
 
 // Split analysis text
 const analysisBlocks = computed(() => {

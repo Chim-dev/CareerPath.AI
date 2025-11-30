@@ -6,7 +6,7 @@
       <div
         v-for="(item, index) in galleryItems"
         :key="index"
-        class="flex flex-col items-center text-center space-y-6 p-6 rounded-3xl bg-[#FAFAF9] backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300"
+        class="flex flex-col items-center text-center space-y-6 p-6 rounded-3xl"
       >
         <img
           :src="item.image"

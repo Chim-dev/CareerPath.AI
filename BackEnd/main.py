@@ -63,7 +63,7 @@ if not GEMINI_KEY:
     raise RuntimeError("❌ GEMINI_API_KEY tidak ditemukan di .env")
 
 genai.configure(api_key=GEMINI_KEY)
-MODEL_NAME = "gemini-2.5-pro"
+MODEL_NAME = "gemini-2.5-flash"
 
 # ============ ENDPOINT UTAMA ============
 @app.post("/analyze", response_model=AnalysisResult)
@@ -102,13 +102,13 @@ Gunakan bahasa informal, santai tapi tetap sopan (seperti ngobrol ke user).
 
 Format output WAJIB persis seperti ini:
 
-paragraf ANALISIS:
+ANALISIS:
 (isi 3-5 kalimat)
 
-paragraf SARAN PENGEMBANGAN DIRI:
+SARAN PENGEMBANGAN DIRI:
 (isi 1-2 kalimat)
 
-paragraf atau section tersendiri untuk REKOMENDASI KARIER:
+REKOMENDASI KARIER:
 1. Karier pertama
 2. Karier kedua
 3. Karier ketiga
