@@ -48,9 +48,16 @@ def clean_markdown(text: str) -> str:
 
 # ============ EXTRACT KARIR ============
 def extract_careers(text: str) -> List[str]:
-    pattern = r'\d+\s*[\.\)]\s*([A-Za-zÀ-ÿ\'\-\s/&]+)'
-    careers = re.findall(pattern, text)
-    return [c.strip() for c in careers][:3]
+    careers: List[str] = []
+
+    for line in text.splitlines():
+        m = re.match(r'^\s*\d+\s*[\.\)]\s*(.+)$', line)
+        if m:
+            title = m.group(1).strip()
+            if title:
+                careers.append(title)
+
+    return careers[:3]
 
 # ============ EXTRACT SARAN ============
 def extract_advice(text: str) -> str:
@@ -112,11 +119,9 @@ REKOMENDASI KARIER:
 1. <nama karier pertama, 1 baris saja dimulai dari nama karir>
 2. <nama karier kedua, 1 baris saja dimulai dari nama karir>
 3. <nama karier ketiga, 1 baris saja dimulai dari nama karir>
-4. <nama karier keempat, 1 baris saja dimulai dari nama karir>
-5. <nama karier kelima, 1 baris saja dimulai dari nama karir>
 
 PENTING:
-- Setiap nomor (1 sampai 5) HARUS berada di baris terpisah.
+- Setiap nomor (1 sampai 3) HARUS berada di baris terpisah.
 - Dilarang menulis beberapa nomor dalam satu baris.
 - Dilarang menggunakan simbol markdown seperti **, *, _, ~, atau ```
 
