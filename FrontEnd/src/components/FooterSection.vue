@@ -93,7 +93,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import logoIcon from '../assets/Icons/Icon.png'
+import logoIcon from '@/assets/Icons/logo-icon.png'
 
 const showMore = ref(false)
 </script>

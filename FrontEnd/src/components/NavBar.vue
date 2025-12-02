@@ -73,7 +73,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useRoute } from 'vue-router'
-import iconImg from '/src/assets/icons/icon.png'
+import iconImg from '@/assets/icons/logo-icon.png'
 
 const route = useRoute()
 
