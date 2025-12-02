@@ -1,16 +1,8 @@
 <template>
   <section
-    class="relative py-50 px-6 bg-gradient-to-br from-cyan-50 via-white to-blue-50 overflow-hidden"
+    class="relative py-50 px-6 bg-blue-50 overflow-hidden"
   >
     <!-- Background Decorative Glow -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div
-        class="absolute -top-32 -left-40 w-[500px] h-[500px] bg-cyan-300/25 blur-3xl rounded-full"
-      ></div>
-      <div
-        class="absolute top-1/3 right-0 w-[450px] h-[450px] bg-purple-300/20 blur-2xl rounded-full"
-      ></div>
-    </div>
 
     <!-- TITLE -->
     <div class="relative z-10 text-center max-w-3xl mx-auto mb-16">

@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative py-30 p-5 sm:min-h-auto xl:py-52 lg:pt-90 lg:px-60 md:px-40 md:min-h-auto w-full 2xl:min-h-screen lg:min-h-auto bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50 overflow-hidden"
+    class="relative py-30 p-5 sm:min-h-auto xl:py-52 lg:pt-90 lg:px-60 md:px-40 md:min-h-auto w-full 2xl:min-h-screen lg:min-h-auto bg-blue-50 overflow-hidden"
   >
 
     <!-- CONTENT WRAPPER -->
