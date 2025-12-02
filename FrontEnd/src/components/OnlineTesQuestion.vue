@@ -165,15 +165,26 @@ function selectAnswer(qIndex, answer) {
   selectedAnswers.value[qIndex] = answer
 }
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
 function nextQuestion() {
   if (currentQuestionIndex.value < questions.value.length - 1) {
-    currentQuestionIndex.value++
+    currentQuestionIndex.value++;
+    scrollToTop();
   }
 }
 
+
+
 function previousQuestion() {
   if (currentQuestionIndex.value > 0) {
-    currentQuestionIndex.value--
+    currentQuestionIndex.value--;
+    scrollToTop();
   }
 }
 
@@ -192,7 +203,7 @@ async function submitAnswers() {
       questions: questions.value.map(q => q.question),
       answers: selectedAnswers.value,
     }
-    
+
     const response = await api.post("/analyze", payload)
 
     resultStore.analysis = response.data.analysis
