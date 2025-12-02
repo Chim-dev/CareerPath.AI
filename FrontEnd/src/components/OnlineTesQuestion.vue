@@ -130,7 +130,7 @@
 <script setup>
 import { ref } from "vue"
 import { useRouter } from "vue-router"
-import axios from "axios"
+import api from "@/api/client.js"
 import { resultStore } from "../stores/resultStores"
 
 const router = useRouter()
@@ -192,11 +192,8 @@ async function submitAnswers() {
       questions: questions.value.map(q => q.question),
       answers: selectedAnswers.value,
     }
-
-    const response = await axios.post("http://localhost:8000/analyze", payload, {
-      headers: { "Content-Type": "application/json" },
-      timeout: 30000
-    })
+    
+    const response = await api.post("/analyze", payload)
 
     resultStore.analysis = response.data.analysis
     resultStore.recommendations = response.data.career_recommendations
