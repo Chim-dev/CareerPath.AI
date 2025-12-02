@@ -45,10 +45,10 @@
 
       <!-- Menu Desktop -->
       <ul class="hidden md:flex space-x-8 font-medium">
-        <li><a href="/career" class="menu-link">Home</a></li>
-        <li><a href="/about" class="menu-link">About</a></li>
-        <li><a href="/career/#career" class="menu-link">Career Path</a></li>
-        <li><a href="/contact" class="menu-link">Contact</a></li>
+        <li><router-link to="/career" class="menu-link">Home</router-link></li>
+        <li><router-link to="/about" class="menu-link">About</router-link></li>
+        <li><router-link to="/career/#career" class="menu-link">Career Path</router-link></li>
+        <li><router-link to="/contact" class="menu-link">Contact</router-link></li>
       </ul>
     </nav>
 
@@ -61,10 +61,26 @@
           isWhiteText ? 'bg-white text-cyan-500' : 'bg-white/95 text-cyan-600'
         ]"
       >
-        <li><a @click="closeMenu" href="/career" class="hover:text-cyan-400 transition">Home</a></li>
-        <li><a @click="closeMenu" href="/about" class="hover:text-cyan-400 transition">About</a></li>
-        <li><a @click="closeMenu" href="/career/#career" class="hover:text-cyan-400 transition">Career Path</a></li>
-        <li><a @click="closeMenu" href="/contact" class="hover:text-cyan-400 transition">Contact</a></li>
+        <li>
+          <router-link @click="closeMenu" to="/career" class="hover:text-cyan-400 transition">
+            Home
+          </router-link>
+        </li>
+        <li>
+          <router-link @click="closeMenu" to="/about" class="hover:text-cyan-400 transition">
+            About
+          </router-link>
+        </li>
+        <li>
+          <router-link @click="closeMenu" to="/career/#career" class="hover:text-cyan-400 transition">
+            Career Path
+          </router-link>
+        </li>
+        <li>
+          <router-link @click="closeMenu" to="/contact" class="hover:text-cyan-400 transition">
+            Contact
+          </router-link>
+        </li>
       </ul>
     </transition>
   </div>
@@ -83,9 +99,7 @@ const whiteTextRoutes = ['/career']
 const isOpen = ref(false)
 const isScrolled = ref(false)
 
-const isWhiteText = computed(() => {
-  return whiteTextRoutes.includes(route.path)
-})
+const isWhiteText = computed(() => whiteTextRoutes.includes(route.path))
 
 const toggleMenu = () => (isOpen.value = !isOpen.value)
 const closeMenu = () => (isOpen.value = false)
