@@ -72,12 +72,12 @@
     <!-- FOOTER -->
     <div class="text-center mt-16 text-gray-600 text-lg">
       Ada Pertanyaan Lain?  
-      <a
-        href="/contact"
+      <router-link
+        to="/contact"
         class="text-cyan-600 font-semibold hover:text-cyan-700 transition"
       >
         Hubungi Kami
-      </a>
+      </router-link>
     </div>
   </section>
 </template>
