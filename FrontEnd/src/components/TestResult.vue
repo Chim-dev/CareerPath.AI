@@ -79,9 +79,7 @@
                   <template
                     v-if="block.toUpperCase().startsWith('REKOMENDASI KARIER')"
                   >
-                    <p class="font-semibold mb-2">
-                      Rekomendasi Karier:
-                    </p>
+                    <p class="font-semibold mb-2">Rekomendasi Karier:</p>
                     <ol
                       class="list-decimal list-inside space-y-1 text-sm md:text-base"
                     >
@@ -115,8 +113,34 @@
             </h3>
           </div>
 
+          <!-- MOBILE: vertical stat bars -->
+          <div class="flex flex-col gap-3 md:hidden">
+            <div
+              v-for="(item, i) in podium"
+              :key="i"
+              class="flex flex-col gap-1"
+              v-if="item"
+            >
+              <div
+                class="flex justify-between items-center text-xs text-gray-500"
+              >
+                <span>Top {{ i + 1 }}</span>
+                <span class="font-medium text-gray-700">{{ item }}</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                <div
+                  class="h-full rounded-full bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-500 transition-all duration-700"
+                  :style="{
+                    width: i === 0 ? '100%' : i === 1 ? '75%' : '50%',
+                  }"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DESKTOP: podium 3 kolom (kode lama) -->
           <div
-            class="flex flex-col md:flex-row items-end justify-center gap-6 mb-4"
+            class="hidden md:flex flex-col md:flex-row items-end justify-center gap-6 mb-4"
           >
             <template v-for="(item, i) in podium" :key="i">
               <div
@@ -171,15 +195,9 @@
                   <p
                     class="font-bold leading-tight"
                     :class="[
-                      i === 0
-                        ? 'text-yellow-900 text-base md:text-lg'
-                        : '',
-                      i === 1
-                        ? 'text-gray-900 text-sm md:text-base'
-                        : '',
-                      i === 2
-                        ? 'text-orange-900 text-sm md:text-base'
-                        : '',
+                      i === 0 ? 'text-yellow-900 text-base md:text-lg' : '',
+                      i === 1 ? 'text-gray-900 text-sm md:text-base' : '',
+                      i === 2 ? 'text-orange-900 text-sm md:text-base' : '',
                     ]"
                   >
                     {{ item }}
@@ -243,7 +261,6 @@
   </section>
 </template>
 
-
 <script setup>
 import { computed } from "vue";
 import { useRouter } from "vue-router";
@@ -278,7 +295,8 @@ const analysisBlocks = computed(() => {
 // Podium
 const podium = computed(() => {
   const list = resultStore.recommendations || [];
-  if (list.length < 3) return ["Menunggu data", "Menunggu data", "Menunggu data"];
+  if (list.length < 3)
+    return ["Menunggu data", "Menunggu data", "Menunggu data"];
   return [list[0], list[1], list[2]];
 });
 </script>
@@ -286,38 +304,80 @@ const podium = computed(() => {
 <style scoped>
 /* semua animation sama, tidak dihapus */
 @keyframes pulse-slow {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.05); }
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes float-reverse {
-  0%, 100% { transform: translateY(0px) translateX(0px); }
-  50% { transform: translateY(20px) translateX(10px); }
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(20px) translateX(10px);
+  }
 }
 
 @keyframes slide-in {
-  from { opacity: 0; transform: translateX(-20px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes bounce-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes progress {
-  from { width: 0; }
+  from {
+    width: 0;
+  }
 }
 
-.animate-pulse-slow { animation: pulse-slow 8s ease-in-out infinite; }
-.animate-float { animation: float 6s ease-in-out infinite; }
-.animate-float-reverse { animation: float-reverse 7s ease-in-out infinite; }
-.animate-slide-in { animation: slide-in 0.6s ease-out forwards; }
-.animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
-.animate-progress { animation: progress 1.5s ease-out; }
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-float-reverse {
+  animation: float-reverse 7s ease-in-out infinite;
+}
+.animate-slide-in {
+  animation: slide-in 0.6s ease-out forwards;
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+.animate-progress {
+  animation: progress 1.5s ease-out;
+}
 </style>
