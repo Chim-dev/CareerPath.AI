@@ -26,19 +26,22 @@
 
 <script setup>
 import { ref } from "vue";
+import gallery1 from "@/assets/gallery-asset.jpg";
+import gallery2 from "@/assets/gallery-asset-2.jpg";
+
 
 const galleryItems = ref([
   {
     titles: "Ketahui bakat dan bidang minatmu dengan AI",
     paragraph:
       "Tes kami menawarkan wawasan mendalam dan personal, membantu Anda menyusun karir masa depan.",
-    image: "/src/assets/gallery-asset.jpg",
+    image: gallery1,
   },
   {
     titles: "Temukan karir masa depanmu dengan mengikuti tes kami",
     paragraph:
       "Dapatkan wawasan dan bantu diri Anda membangun fokus dalam menentukan arah karir.",
-    image: "/src/assets/gallery-asset-2.jpg",
+    image: gallery2,
   },
 ]);
 </script>
