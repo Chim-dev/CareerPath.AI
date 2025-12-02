@@ -137,7 +137,7 @@
                     ]"
                   >
                     <span class="text-4xl" v-if="i === 0">👑</span>
-                    <span class="text-3xl font-bold text-gray-600" v-else>{{
+                    <span class="text-3xl font-bold text-gray-900" v-else>{{
                       i + 1
                     }}</span>
                   </div>
@@ -153,7 +153,7 @@
                       : 'bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-orange-400 w-44',
                   ]"
                 >
-                  <p class="font-bold leading-tight">{{ item }}</p>
+                  <p class="font-bold leading-tight text-gray-700">{{ item }}</p>
                 </div>
 
                 <div
