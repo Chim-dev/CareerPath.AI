@@ -23,14 +23,22 @@
       class="relative z-10 max-w-4xl mx-auto bg-white/95 backdrop-blur-xl shadow-2xl rounded-3xl border-2 border-cyan-200/70 overflow-hidden"
     >
       <!-- Header Section with Gradient -->
-      <div class="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 p-8 md:p-10 text-center relative overflow-hidden">
+      <div
+        class="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 p-8 md:p-10 text-center relative overflow-hidden"
+      >
         <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
         <div class="relative z-10">
-          <div class="inline-block bg-white/20 backdrop-blur-md rounded-full px-6 py-2 mb-4">
-            <span class="text-white font-semibold text-sm">Assessment Completed</span>
+          <div
+            class="inline-block bg-white/20 backdrop-blur-md rounded-full px-6 py-2 mb-4"
+          >
+            <span class="text-white font-semibold text-sm"
+              >Assessment Completed</span
+            >
           </div>
-          <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-2 drop-shadow-lg">
-             Hasil Analisis Karier
+          <h2
+            class="text-3xl md:text-5xl font-extrabold text-white mb-2 drop-shadow-lg"
+          >
+            Hasil Analisis Karier
           </h2>
           <p class="text-cyan-50 text-lg">Temukan potensi terbaik Anda</p>
         </div>
@@ -41,10 +49,14 @@
         <!-- Analisis Section -->
         <div class="mb-12">
           <div class="flex items-center gap-3 mb-6">
-            <div class="w-1 h-8 bg-gradient-to-b from-cyan-500 to-blue-500 rounded-full"></div>
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-800">Analisis Kepribadian</h3>
+            <div
+              class="w-1 h-8 bg-gradient-to-b from-cyan-500 to-blue-500 rounded-full"
+            ></div>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-800">
+              Analisis Kepribadian
+            </h3>
           </div>
-          
+
           <div class="space-y-5">
             <div
               v-for="(block, idx) in analysisBlocks"
@@ -57,8 +69,36 @@
               class="animate-slide-in"
             >
               <div class="flex items-start gap-3">
-                <span class="text-2xl flex-shrink-0">{{ emojiList[idx % emojiList.length] }}</span>
-                <p class="flex-1">{{ block }}</p>
+                <span class="text-2xl flex-shrink-0">{{
+                  emojiList[idx % emojiList.length]
+                }}</span>
+
+                <!-- PERBAIKAN DI SINI -->
+                <div class="flex-1">
+                  <!-- Jika block adalah REKOMENDASI KARIER, tampilkan per poin -->
+                  <template
+                    v-if="block.toUpperCase().startsWith('REKOMENDASI KARIER')"
+                  >
+                    <p class="font-semibold mb-2">
+                      Rekomendasi Karier:
+                    </p>
+                    <ol
+                      class="list-decimal list-inside space-y-1 text-sm md:text-base"
+                    >
+                      <li
+                        v-for="(rec, i) in resultStore.recommendations"
+                        :key="i"
+                      >
+                        {{ rec }}
+                      </li>
+                    </ol>
+                  </template>
+
+                  <!-- Selain itu, tampilkan block biasa -->
+                  <p v-else>
+                    {{ block }}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -67,11 +107,17 @@
         <!-- Podium Section -->
         <div class="mb-12">
           <div class="flex items-center gap-3 mb-8">
-            <div class="w-1 h-8 bg-gradient-to-b from-yellow-500 to-orange-500 rounded-full"></div>
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-800">Top 3 Rekomendasi Karier</h3>
+            <div
+              class="w-1 h-8 bg-gradient-to-b from-yellow-500 to-orange-500 rounded-full"
+            ></div>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-800">
+              Top 3 Rekomendasi Karier
+            </h3>
           </div>
 
-          <div class="flex flex-col md:flex-row items-end justify-center gap-6 mb-4">
+          <div
+            class="flex flex-col md:flex-row items-end justify-center gap-6 mb-4"
+          >
             <template v-for="(item, i) in podium" :key="i">
               <div
                 v-if="item"
@@ -90,30 +136,50 @@
                   <div
                     class="rounded-full flex items-center justify-center shadow-2xl"
                     :class="[
-                      i === 0 ? 'w-20 h-20 bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-500 border-4 border-yellow-200' : '',
-                      i === 1 ? 'w-16 h-16 bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 border-4 border-gray-200' : '',
-                      i === 2 ? 'w-16 h-16 bg-gradient-to-br from-orange-300 via-orange-400 to-orange-500 border-4 border-orange-200' : '',
+                      i === 0
+                        ? 'w-20 h-20 bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-500 border-4 border-yellow-200'
+                        : '',
+                      i === 1
+                        ? 'w-16 h-16 bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 border-4 border-gray-200'
+                        : '',
+                      i === 2
+                        ? 'w-16 h-16 bg-gradient-to-br from-orange-300 via-orange-400 to-orange-500 border-4 border-orange-200'
+                        : '',
                     ]"
                   >
                     <span class="text-4xl" v-if="i === 0">👑</span>
-                    <span class="text-3xl font-bold text-white" v-else>{{ i + 1 }}</span>
+                    <span class="text-3xl font-bold text-white" v-else>{{
+                      i + 1
+                    }}</span>
                   </div>
                 </div>
 
                 <div
                   class="relative rounded-2xl p-5 mb-3 text-center shadow-lg"
                   :class="[
-                    i === 0 ? 'bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-400 w-full md:w-48' : '',
-                    i === 1 ? 'bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-gray-400 w-full md:w-44' : '',
-                    i === 2 ? 'bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-orange-400 w-full md:w-44' : '',
+                    i === 0
+                      ? 'bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-400 w-full md:w-48'
+                      : '',
+                    i === 1
+                      ? 'bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-gray-400 w-full md:w-44'
+                      : '',
+                    i === 2
+                      ? 'bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-orange-400 w-full md:w-44'
+                      : '',
                   ]"
                 >
                   <p
                     class="font-bold leading-tight"
                     :class="[
-                      i === 0 ? 'text-yellow-900 text-base md:text-lg' : '',
-                      i === 1 ? 'text-gray-900 text-sm md:text-base' : '',
-                      i === 2 ? 'text-orange-900 text-sm md:text-base' : '',
+                      i === 0
+                        ? 'text-yellow-900 text-base md:text-lg'
+                        : '',
+                      i === 1
+                        ? 'text-gray-900 text-sm md:text-base'
+                        : '',
+                      i === 2
+                        ? 'text-orange-900 text-sm md:text-base'
+                        : '',
                     ]"
                   >
                     {{ item }}
@@ -123,9 +189,15 @@
                 <div
                   class="rounded-t-2xl shadow-xl"
                   :class="[
-                    i === 0 ? 'bg-gradient-to-t from-yellow-400 to-yellow-300 h-40 w-full md:w-48' : '',
-                    i === 1 ? 'bg-gradient-to-t from-gray-400 to-gray-300 h-32 w-full md:w-44' : '',
-                    i === 2 ? 'bg-gradient-to-t from-orange-400 to-orange-300 h-24 w-full md:w-44' : '',
+                    i === 0
+                      ? 'bg-gradient-to-t from-yellow-400 to-yellow-300 h-40 w-full md:w-48'
+                      : '',
+                    i === 1
+                      ? 'bg-gradient-to-t from-gray-400 to-gray-300 h-32 w-full md:w-44'
+                      : '',
+                    i === 2
+                      ? 'bg-gradient-to-t from-orange-400 to-orange-300 h-24 w-full md:w-44'
+                      : '',
                   ]"
                 ></div>
               </div>
@@ -134,16 +206,22 @@
         </div>
 
         <!-- Confidence Score -->
-        <div class="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl p-6 mb-10 border border-cyan-200 shadow-md">
+        <div
+          class="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl p-6 mb-10 border border-cyan-200 shadow-md"
+        >
           <div class="flex items-center justify-between mb-3">
-            <span class="text-lg font-semibold text-gray-800 flex items-center gap-2">
+            <span
+              class="text-lg font-semibold text-gray-800 flex items-center gap-2"
+            >
               ✨ Tingkat Kepercayaan
             </span>
             <span class="text-2xl font-black text-cyan-600">
               {{ (resultStore.confidence * 100).toFixed(0) }}%
             </span>
           </div>
-          <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+          <div
+            class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner"
+          >
             <div
               class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 h-full rounded-full transition-all duration-1000 ease-out animate-progress"
               :style="{ width: `${resultStore.confidence * 100}%` }"
@@ -164,6 +242,7 @@
     </div>
   </section>
 </template>
+
 
 <script setup>
 import { computed } from "vue";
