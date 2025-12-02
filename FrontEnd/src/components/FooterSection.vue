@@ -15,23 +15,31 @@
         <div>
           <h3 class="font-semibold text-gray-800 mb-3">Explore</h3>
           <ul class="space-y-2 text-sm">
-            <li><a href="/career" class="hover:text-[#00B8D9] transition">Home</a></li>
-            <li><a href="/about" class="hover:text-[#00B8D9] transition">About Us</a></li>
-            <li><a href="/career" class="hover:text-[#00B8D9] transition">Career Path</a></li>
-            <li><a href="#contact" class="hover:text-[#00B8D9] transition">Contact</a></li>
+            <li>
+              <router-link to="/career" class="hover:text-[#00B8D9] transition">Home</router-link>
+            </li>
+            <li>
+              <router-link to="/about" class="hover:text-[#00B8D9] transition">About Us</router-link>
+            </li>
+            <li>
+              <router-link to="/career#career" class="hover:text-[#00B8D9] transition">Career Path</router-link>
+            </li>
+            <li>
+              <router-link to="/contact" class="hover:text-[#00B8D9] transition">Contact</router-link>
+            </li>
           </ul>
         </div>
 
         <div>
           <h3 class="font-semibold text-gray-800 mb-3">Support</h3>
           <ul class="space-y-2 text-sm">
-            <li><a href="/faqs" class="hover:text-[#00B8D9] transition">FAQs</a></li>
+            <li>
+              <router-link to="/faqs" class="hover:text-[#00B8D9] transition">FAQs</router-link>
+            </li>
           </ul>
         </div>
-
       </div>
 
-      <!-- Garis Pemisah -->
       <hr class="my-6 border-gray-200" />
 
       <div class="flex flex-col items-center text-center text-sm text-gray-500 space-y-3">

@@ -2,11 +2,6 @@
   <section
     class="relative py-30 p-5 sm:min-h-auto xl:py-52 lg:pt-90 lg:px-60 md:px-40 md:min-h-auto w-full 2xl:min-h-screen lg:min-h-auto bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50 overflow-hidden"
   >
-    <!-- Soft Background Gradients -->
-    <div class="absolute inset-0 pointer-events-none z-0">
-      <div class="absolute -top-48 -left-48 w-[550px] h-[550px] bg-gradient-to-br from-cyan-300 to-blue-400 rounded-full opacity-30 blur-3xl"></div>
-      <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tr from-purple-300 to-pink-300 rounded-full opacity-20 blur-2xl"></div>
-    </div>
 
     <!-- CONTENT WRAPPER -->
     <div
@@ -15,7 +10,7 @@
       <!-- LEFT SECTION -->
       <div class="space-y-6 px-3 md:px-0"
       data-aos="fade-up"
-      data-aos-delay="400"
+      data-aos-delay="400" 
       data-aos-duration="500"
       >
         <h2 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
