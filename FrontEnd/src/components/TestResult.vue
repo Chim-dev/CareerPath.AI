@@ -113,62 +113,27 @@
             </h3>
           </div>
 
-          <!-- MOBILE: vertical stat bars -->
-          <div class="flex flex-col gap-3 md:hidden">
-            <div
-              v-for="(item, i) in podium"
-              :key="i"
-              class="flex flex-col gap-1"
-              v-if="item"
-            >
-              <div
-                class="flex justify-between items-center text-xs text-gray-500"
-              >
-                <span>Top {{ i + 1 }}</span>
-                <span class="font-medium text-gray-700">{{ item }}</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
-                <div
-                  class="h-full rounded-full bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-500 transition-all duration-700"
-                  :style="{
-                    width: i === 0 ? '100%' : i === 1 ? '75%' : '50%',
-                  }"
-                ></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- DESKTOP: podium 3 kolom (kode lama) -->
-          <div
-            class="hidden md:flex flex-col md:flex-row items-end justify-center gap-6 mb-4"
-          >
+          <!-- 📌 DESKTOP (podium) -->
+          <div class="hidden md:flex items-end justify-center gap-6 mb-4">
             <template v-for="(item, i) in podium" :key="i">
               <div
                 v-if="item"
                 class="podium-item flex flex-col items-center"
                 :class="{
-                  'order-2 md:order-2': i === 0,
-                  'order-1 md:order-1': i === 1,
-                  'order-3 md:order-3': i === 2,
+                  'order-2': i === 0,
+                  'order-1': i === 1,
+                  'order-3': i === 2,
                 }"
-                :style="{ animationDelay: `${i * 0.2}s` }"
               >
-                <div
-                  class="relative mb-4 transform transition-all duration-300 hover:scale-110"
-                  :class="{ 'animate-bounce-slow': i === 0 }"
-                >
+                <div class="relative mb-4">
                   <div
                     class="rounded-full flex items-center justify-center shadow-2xl"
                     :class="[
                       i === 0
                         ? 'w-20 h-20 bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-500 border-4 border-yellow-200'
-                        : '',
-                      i === 1
+                        : i === 1
                         ? 'w-16 h-16 bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 border-4 border-gray-200'
-                        : '',
-                      i === 2
-                        ? 'w-16 h-16 bg-gradient-to-br from-orange-300 via-orange-400 to-orange-500 border-4 border-orange-200'
-                        : '',
+                        : 'w-16 h-16 bg-gradient-to-br from-orange-300 via-orange-400 to-orange-500 border-4 border-orange-200',
                     ]"
                   >
                     <span class="text-4xl" v-if="i === 0">👑</span>
@@ -182,44 +147,53 @@
                   class="relative rounded-2xl p-5 mb-3 text-center shadow-lg"
                   :class="[
                     i === 0
-                      ? 'bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-400 w-full md:w-48'
-                      : '',
-                    i === 1
-                      ? 'bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-gray-400 w-full md:w-44'
-                      : '',
-                    i === 2
-                      ? 'bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-orange-400 w-full md:w-44'
-                      : '',
+                      ? 'bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-400 w-48'
+                      : i === 1
+                      ? 'bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-gray-400 w-44'
+                      : 'bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-orange-400 w-44',
                   ]"
                 >
-                  <p
-                    class="font-bold leading-tight"
-                    :class="[
-                      i === 0 ? 'text-yellow-900 text-base md:text-lg' : '',
-                      i === 1 ? 'text-gray-900 text-sm md:text-base' : '',
-                      i === 2 ? 'text-orange-900 text-sm md:text-base' : '',
-                    ]"
-                  >
-                    {{ item }}
-                  </p>
+                  <p class="font-bold leading-tight">{{ item }}</p>
                 </div>
 
                 <div
                   class="rounded-t-2xl shadow-xl"
                   :class="[
                     i === 0
-                      ? 'bg-gradient-to-t from-yellow-400 to-yellow-300 h-40 w-full md:w-48'
-                      : '',
-                    i === 1
-                      ? 'bg-gradient-to-t from-gray-400 to-gray-300 h-32 w-full md:w-44'
-                      : '',
-                    i === 2
-                      ? 'bg-gradient-to-t from-orange-400 to-orange-300 h-24 w-full md:w-44'
-                      : '',
+                      ? 'bg-gradient-to-t from-yellow-400 to-yellow-300 h-40 w-48'
+                      : i === 1
+                      ? 'bg-gradient-to-t from-gray-400 to-gray-300 h-32 w-44'
+                      : 'bg-gradient-to-t from-orange-400 to-orange-300 h-24 w-44',
                   ]"
                 ></div>
               </div>
             </template>
+          </div>
+
+          <!-- 📱 MOBILE (horizontal statistic bars) -->
+          <div class="space-y-4 md:hidden">
+            <div
+              v-for="(item, i) in podium"
+              :key="i"
+              class="flex flex-col gap-1 bg-white p-4 rounded-xl shadow-md border border-gray-200"
+            >
+              <span class="font-semibold text-sm text-gray-700"
+                >{{ i + 1 }}. {{ item }}</span
+              >
+              <div class="w-full h-4 bg-gray-200 rounded-full overflow-hidden">
+                <div
+                  class="h-full rounded-full transition-all duration-500"
+                  :class="[
+                    i === 0
+                      ? 'bg-gradient-to-r from-yellow-400 to-yellow-600'
+                      : i === 1
+                      ? 'bg-gradient-to-r from-gray-400 to-gray-600'
+                      : 'bg-gradient-to-r from-orange-400 to-orange-600',
+                  ]"
+                  :style="{ width: `${100 - i * 20}%` }"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
 
