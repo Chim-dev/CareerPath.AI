@@ -137,7 +137,7 @@
                     ]"
                   >
                     <span class="text-4xl" v-if="i === 0">👑</span>
-                    <span class="text-3xl font-bold text-white" v-else>{{
+                    <span class="text-3xl font-bold text-gray-600" v-else>{{
                       i + 1
                     }}</span>
                   </div>
