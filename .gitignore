@@ -1,0 +1,15 @@
+# Ignore environment files
+.env
+**/.env
+
+# Node
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# VSCode
+.vscode/
