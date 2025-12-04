@@ -22,8 +22,8 @@
       <h1
         class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white hero-item item-delay-2"
       >
-        Temukan Karier Impianmu <br />
-        Dengan <span class="text-cyan-200">Wawasan Bertenaga AI</span>
+        Temukan Karier Masa Depan Impianmu <br />
+        Dengan <span class="text-cyan-200">Career AI</span>
       </h1>
 
       <p

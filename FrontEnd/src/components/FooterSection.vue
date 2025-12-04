@@ -22,9 +22,6 @@
               <router-link to="/about" class="hover:text-[#00B8D9] transition">About Us</router-link>
             </li>
             <li>
-              <router-link to="/career#career" class="hover:text-[#00B8D9] transition">Career Path</router-link>
-            </li>
-            <li>
               <router-link to="/contact" class="hover:text-[#00B8D9] transition">Contact</router-link>
             </li>
           </ul>
