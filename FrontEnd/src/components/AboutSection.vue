@@ -26,7 +26,7 @@
 
       <!-- TEXT -->
       <div
-        class="opacity-0 translate-x-10 animation-fade-left p-4 md:p-10 lg:p-14"
+        class="opacity-0 translate-x-10 animation-fade-left px-10 pt-4 md:p-10 lg:p-14 sm:px-20"
         style="animation-delay: 0.5s"
       >
         <h2
@@ -49,21 +49,6 @@
           pengguna.
         </p>
 
-        <!-- Social Icons -->
-        <div class="flex gap-7 items-center">
-          <i
-            class="lab la-facebook-f text-3xl text-gray-800 hover:text-black transition"
-          ></i>
-          <i
-            class="lab la-twitter text-3xl text-gray-800 hover:text-black transition"
-          ></i>
-          <i
-            class="lab la-instagram text-3xl text-gray-800 hover:text-black transition"
-          ></i>
-          <i
-            class="lab la-linkedin-in text-3xl text-gray-800 hover:text-black transition"
-          ></i>
-        </div>
       </div>
     </div>
   </section>
