@@ -197,30 +197,6 @@
           </div>
         </div>
 
-        <!-- Confidence Score -->
-        <div
-          class="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl p-6 mb-10 border border-cyan-200 shadow-md"
-        >
-          <div class="flex items-center justify-between mb-3">
-            <span
-              class="text-lg font-semibold text-gray-800 flex items-center gap-2"
-            >
-              ✨ Tingkat Kepercayaan
-            </span>
-            <span class="text-2xl font-black text-cyan-600">
-              {{ (resultStore.confidence * 100).toFixed(0) }}%
-            </span>
-          </div>
-          <div
-            class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner"
-          >
-            <div
-              class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 h-full rounded-full transition-all duration-1000 ease-out animate-progress"
-              :style="{ width: `${resultStore.confidence * 100}%` }"
-            ></div>
-          </div>
-        </div>
-
         <!-- Actions (PDF removed → hanya tombol kembali) -->
         <div class="flex justify-center">
           <button
