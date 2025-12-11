@@ -62,73 +62,39 @@ function scrollToCareerCards() {
 </script>
 
 <style scoped>
-/* RIPPLE DROPLET */
-.ripple-circle {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: ripple 1.4s ease-out forwards;
-  filter: blur(2px);
-}
-
-
-@keyframes ripple {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(0.1);
-  }
-  60% {
-    opacity: 0.5;
-    transform: translate(-50%, -50%) scale(3.6);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(5);
-  }
-}
-
-/* RADIAL REVEAL ANIMATION */
+/* SLIDE UP ANIMATION */
 .hero-item {
   opacity: 0;
-  transform: scale(0.6);
-  animation: hero-reveal 0.8s cubic-bezier(0.2, 0.7, 0.3, 1.2) forwards;
+  transform: translateY(20px); /* Mulai dari bawah */
+  animation: slide-up 0.6s ease-out forwards;
 }
 
-@keyframes hero-reveal {
+@keyframes slide-up {
   0% {
     opacity: 0;
-    transform: scale(0.6);
-    filter: blur(6px);
-  }
-  70% {
-    opacity: 1;
-    transform: scale(1.04);
-    filter: blur(0);
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0); /* Akhirnya di posisi normal */
   }
 }
 
 /* Stagger delay */
 .item-delay-1 {
-  animation-delay: 1.3s;
+  animation-delay: 0.4s;
 }
 .item-delay-2 {
-  animation-delay: 1.35s;
+  animation-delay: 0.5s;
 }
 .item-delay-3 {
-  animation-delay: 1.4s;
+  animation-delay: 0.6s;
 }
 .item-delay-4 {
-  animation-delay: 1.55s;
+  animation-delay: 0.7s;
 }
 .item-delay-5 {
-  animation-delay: 1.6s;
+  animation-delay: 0.8s;
 }
 </style>
+
