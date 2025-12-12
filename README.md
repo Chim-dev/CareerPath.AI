@@ -51,3 +51,11 @@ Start the server
 
 **Backend:** FASTAPI
 
+
+## FILE REPORT on BRANCH cots
+
+AboutMe.vue
+AboutMePage.vue
+index.js on src/router
+
+route via navbar
