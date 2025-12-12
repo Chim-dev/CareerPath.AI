@@ -45,7 +45,7 @@
       
       <!-- IMAGE -->
       <div
-        class="opacity-0 translate-y-10 animation-fade-up lg:visible invisible"
+        class="opacity-0 translate-y-10 animation-fade-up hidden lg:block"
         style="animation-delay: 0.2s"
       >
         <img
