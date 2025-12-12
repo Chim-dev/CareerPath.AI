@@ -4,7 +4,7 @@
       :class="[
         'transition-all duration-500 ease-in-out flex items-center justify-between w-full shadow-md px-6 py-6 md:px-10 md:py-4',
         isScrolled
-          ? 'bg-[#FDFDF9] shadow-lg rounded-3xl scale-100 max-w-3xl text-cyan-500'
+          ? 'bg-[#FDFDF9] shadow-lg rounded-3xl scale-100 max-w-4xl text-cyan-500'
           : 'bg-[#FDFDF9] shadow-md rounded-3xl max-w-6xl',
         !isScrolled && isWhiteText ? 'text-cyan-500' : 'text-cyan-500'
       ]"
@@ -70,11 +70,14 @@
             class="menu-link"
             @click="handleCareerClick"
           >
-            Career Path
+            Career
           </router-link>
         </li>
         <li>
           <router-link to="/contact" class="menu-link">Contact</router-link>
+        </li>
+        <li>
+          <router-link to="/aboutme" class="menu-link">About Me</router-link>
         </li>
       </ul>
     </nav>
@@ -107,12 +110,17 @@
             @click="handleCareerClickMobile"
             class="hover:text-cyan-400 transition"
           >
-            Career Path
+            Career
           </router-link>
         </li>
         <li>
           <router-link @click="closeMenu" to="/contact" class="hover:text-cyan-400 transition">
             Contact
+          </router-link>
+        </li>
+        <li>
+          <router-link @click="closeMenu" to="/aboutme" class="hover:text-cyan-400 transition">
+            About Me
           </router-link>
         </li>
       </ul>
@@ -288,7 +296,7 @@ onMounted(() => {
   window.addEventListener('scroll', handleScroll)
 })
 
-onUnmounted(() => {
+onUnmounted(() => { 
   // Bersihkan scroll listener saat component unmounted
   // Penting untuk mencegah memory leak
   window.removeEventListener('scroll', handleScroll)

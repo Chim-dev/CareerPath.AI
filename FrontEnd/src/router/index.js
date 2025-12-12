@@ -6,6 +6,7 @@ import ContactPage from '../pages/ContactPage.vue'
 import TestPage from '../pages/TestPage.vue'
 import FaqsPage from '../pages/FaqsPage.vue'
 import ResultPage from '../pages/ResultPage.vue'
+import AboutMePage from '../pages/AboutMePage.vue'
 
 const routes = [
   { path: '/', name: 'Landing', component: LandingPage },
@@ -14,7 +15,8 @@ const routes = [
   { path: '/contact', name: 'Contact', component: ContactPage},
   { path: '/test', name: 'Test', component: TestPage},
   { path: '/faqs', name: 'FAQ', component: FaqsPage},
-  { path: '/result', name: 'Result', component: ResultPage}
+  { path: '/result', name: 'Result', component: ResultPage},
+  { path: '/aboutme', name: 'AboutMe', component: AboutMePage}
 ]
 
 const router = createRouter({
